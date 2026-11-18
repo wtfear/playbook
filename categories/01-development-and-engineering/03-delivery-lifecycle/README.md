@@ -59,6 +59,10 @@ flowchart TD
 | `11` | [`11-operation-maintenance-and-technical-closure.md`](./11-operation-maintenance-and-technical-closure.md) | Monitoring, bug fixes, dependency updates | Operational Health & Incident Logs |
 | `12` | [`12-retirement-and-client-exit.md`](./12-retirement-and-client-exit.md) | Decommissioning, data export, asset shutdown | Final Decommissioning Audit Record |
 
+## Core Lifecycle Templates
+
+- [`foundation-document-template.md`](./foundation-document-template.md): Complete Phase 0 Foundation & System Design Contract (SLOs, NFRs, architecture, event taxonomy, threat models, and sign-off gate).
+
 ## Open Questions
 
 - What criteria allow a small, low-risk project to fast-track or combine early lifecycle stages?

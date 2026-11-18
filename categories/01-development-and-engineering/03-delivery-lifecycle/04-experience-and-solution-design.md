@@ -9,6 +9,7 @@ related_documents:
   - "./README.md"
   - "./02-discovery-and-requirements.md"
   - "./05-feasibility-estimation-and-planning.md"
+  - "./foundation-document-template.md"
   - "../04-engineering-standards/architecture-and-technical-decisions.md"
   - "../04-engineering-standards/ux-ui-and-accessibility.md"
 ---
@@ -43,6 +44,7 @@ Applies to all new builds, major feature additions, and system re-architectures.
 - What lightweight threat modeling method (e.g., STRIDE-lite) is practical for startup projects?
 
 ## 6. Candidate Evidence and Artifacts
+- Technical Foundation Contract ([`./foundation-document-template.md`](./foundation-document-template.md)).
 - Solution Architecture Document (SAD) with C4 model diagrams.
 - Entity-Relationship Diagram (ERD) and Data Dictionary.
 - API Schema Contracts (OpenAPI specifications).
