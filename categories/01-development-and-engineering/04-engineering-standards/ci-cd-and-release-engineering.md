@@ -24,25 +24,31 @@ Establishes proposed standards for automated continuous integration (CI), contin
 
 ---
 
-## 2. The 13-Stage DevSecOps CI Pipeline
+## 2. Risk-Tiered CI/CD Pipeline & Candidate Stages
 
-Every pull request and merge to the trunk branch (`main`) must execute through an automated pipeline enforcing quality, security, and build integrity:
+To maintain rapid developer feedback loops without sacrificing security, pipelines are tailored by project risk tier and trigger event per [`../01-engineering-governance/project-risk-and-tailoring.md`](../01-engineering-governance/project-risk-and-tailoring.md). Heavy validation stages must never block routine PRs or solo-developer iteration.
 
-| Stage # | Pipeline Stage | Primary Tool / Mechanism | Pass / Fail Gate Criteria |
-| :---: | :--- | :--- | :--- |
-| `01` | **Pre-commit / Secret Scan** | Git hooks, Gitleaks, Trufflehog | Zero detected high-entropy credentials or API keys. |
-| `02` | **Software Composition (SCA)**| Dependabot, Snyk, `npm audit` | Zero unpatched High/Critical known CVEs in libraries. |
-| `03` | **Static Security (SAST)** | Semgrep, SonarQube, CodeQL | Zero OWASP Top 10 vulnerabilities detected in code. |
-| `04` | **Linting & Code Style** | ESLint, Biome, Ruff, Prettier | 100% adherence to project style rules; zero warnings. |
-| `05` | **Type Checking** | `tsc --noEmit`, `mypy`, `pyright` | Zero static type errors. |
-| `06` | **Unit Testing** | Vitest, Jest, PyTest, Go test | 100% test pass rate; minimum line coverage enforced. |
-| `07` | **Integration Testing** | Testcontainers, LocalStack | Successful communication with containerized dependencies. |
-| `08` | **Contract & API Testing** | Pact, Schemathesis, OpenAPI diff | Zero breaking changes to public or inter-service schemas. |
-| `09` | **Immutable Build** | Docker, Cloud Native Buildpacks | Deterministic, reproducible build artifact generated. |
-| `10` | **Container Vulnerability Scan**| Trivy, Grype | Zero Critical CVEs in OS base layers or installed packages. |
-| `11` | **Signing & SBOM Generation** | Cosign / Sigstore, Syft, CycloneDX | Signed cryptographic digest and exported software bill of materials. |
-| `12` | **Staging Smoke Deployment** | Ephemeral preview / Staging runner | Health probe `/health/live` and `/health/ready` return 200 OK. |
-| `13` | **Performance Benchmark** | Lighthouse CI, k6 | Performance budgets and p95 latency targets satisfied. |
+### 2.1 Fast Pull Request Baseline (Lightweight PR Candidate)
+Every routine pull request executes a fast-feedback check (< 3–5 minutes target duration):
+- **Secret Scan:** Pre-commit or CI secret detection (e.g., Gitleaks) to prevent credential leaks.
+- **Linting & Code Style:** Fast static linters (e.g., ESLint, Ruff, Biome).
+- **Type Checking:** Static type verification (e.g., `tsc --noEmit`, `mypy`).
+- **Unit Testing:** Fast, isolated unit tests (e.g., Vitest, pytest).
+
+### 2.2 Extended Stages (Release Branches & Tier 2/3 Engagements)
+Heavier stages run conditionally on release tags, scheduled nightly builds, or high-risk Tier 3 engagements—**never mandatory on every routine PR**:
+
+| Stage | Candidate Purpose | Example Tools | When Triggered / Applicable |
+| :--- | :--- | :--- | :--- |
+| **SCA & Dependency Audit** | Check for unpatched Critical CVEs | `npm audit`, Dependabot | Scheduled / Release PRs |
+| **Static Security (SAST)** | Static vulnerability scanning | Semgrep, CodeQL | Release branches / Tier 3 |
+| **Integration Testing** | Containerized service testing | Testcontainers, LocalStack | Pre-release or Tier 2/3 builds |
+| **Contract & API Testing** | Inter-service API schema compatibility | OpenAPI diff, Pact | Multi-service API releases |
+| **Immutable Build & Packaging** | Produce versioned container/bundle | Docker, Buildpacks | Merge to `main` / Release |
+| **Container Scan** | Scan container OS layers | Trivy, Grype | Containerized release builds |
+| **Signing & SBOM** | Attest provenance and software bill of materials | Cosign, Syft | High-compliance / Tier 3 client releases |
+| **Staging Smoke Deployment** | Verify ephemeral preview or staging health | Cloud PaaS / Health probe | Staging deploy trigger |
+| **Performance Benchmark** | Load or frontend regression testing | k6, Lighthouse CI | Major milestone releases |
 
 ---
 
@@ -51,7 +57,7 @@ Every pull request and merge to the trunk branch (`main`) must execute through a
 Modern deployment pipelines forbid rebuilding software artifacts per environment. Code must follow these immutable principles:
 
 1. **Build Once, Deploy Anywhere:** The exact same binary, container image, or bundle deployed to staging is promoted to production. Configuration is never compiled into the artifact; it is injected at runtime via environment variables or secret vaults.
-2. **Cryptographic Signing:** Production images must be signed using Cosign/Sigstore with keyless OIDC provenance, establishing verifiable supply-chain security (SLSA Level 2+).
+2. **Cryptographic Signing & Provenance:** Where client contracts or Tier 3 security require verifiable supply-chain security (SLSA Level 2+), production images should be signed using Cosign/Sigstore with keyless OIDC provenance.
 3. **Traceability to Commit SHA:** Artifact tags must map directly to the immutable Git commit SHA (`image:sha-4b3f8a1`) rather than mutable labels like `latest`.
 4. **Software Bill of Materials (SBOM):** Every build automatically generates a CycloneDX or SPDX JSON manifest cataloging all third-party dependencies, licenses, and hashes.
 5. **Promotion Without Rebuild:** Moving from Staging to Production is an orchestration metadata update, pointing the production router to the verified artifact digest.

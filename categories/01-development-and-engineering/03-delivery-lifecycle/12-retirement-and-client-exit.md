@@ -43,20 +43,21 @@ Before executing irreversible resource destruction, the team must verify:
 | Gate | Verification Question | Mandatory Evidence |
 | :---: | :--- | :--- |
 | **G1** | Have all internal and external consumers been notified 30+ days in advance? | Broadcast notification log & client acknowledgement. |
-| **G2** | Has active production traffic ceased? | Access logs show 0 inbound requests for 14 continuous days. |
+| **G2** | Has active business traffic ceased and cutover completed? | Verify DNS cutover/shutdown or maintenance redirect, confirm zero active authenticated/business traffic (filtering out automated internet scanner/crawler noise), and obtain written client sign-off via Project Delivery ([`../../11-project-delivery-and-client-service/README.md`](../../11-project-delivery-and-client-service/README.md)). |
 | **G3** | Has a complete data export been generated and verified by the client? | SHA-256 checksummed archive delivery receipt. |
 | **G4** | Have DNS TTLs been lowered to 300s and redirect/tombstone pages activated? | DNS record query showing HTTP 410 Gone or 301 Redirect. |
 | **G5** | Has legal/compliance signed off on statutory data retention periods? | Written approval from Legal/Risk officer. |
 
 ---
 
-## 4. NIST SP 800-88 Compliant Data Sanitization
+## 4. NIST SP 800-88 Compliant Data Sanitization & Asset Handover
 
-All customer data and sensitive credentials must be purged following NIST SP 800-88 Rev 1 guidelines:
+All customer data and sensitive credentials must be managed following safe sanitization and handover protocols aligned with NIST SP 800-88 Rev 1 guidelines:
 
-1. **Clear:** Logical sanitization of all databases, storage volumes, and caches via administrative reset and database truncation commands.
-2. **Cryptographic Erase (Purge):** For cloud storage buckets (AWS S3, GCP GCS) and encrypted databases (RDS, Cloud SQL), delete the customer-managed KMS master key (`kms:ScheduleKeyDeletion`). Without the key, underlying ciphertext is permanently unrecoverable.
-3. **Destruction Verification:** Obtain and archive cloud provider audit logs confirming resource deletion.
+1. **Export & Asset Handover:** Export and transfer all agreed client data, configuration, and artifacts to client-designated storage, verified via checksums.
+2. **Scoped Agency Access Revocation:** Revoke and delete ONLY agency IAM users, roles, cross-account permissions, and API tokens. Never delete customer-managed KMS master keys, shared encryption keys, or broad cloud account resources unilaterally.
+3. **Client-Owned Cryptographic Deletion / Purge:** Any cryptographic erasure, key deletion, or physical/cloud data destruction inside client-owned accounts requires explicit written client authorization and must be executed or authorized directly by the client's infrastructure owner, never performed unilaterally by agency engineers.
+4. **Destruction Verification:** Where agency-hosted temporary staging/backup volumes exist, execute logical sanitization and archive provider deletion logs.
 
 ---
 

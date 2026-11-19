@@ -11,8 +11,11 @@ related_documents:
   - "../../categories/01-development-and-engineering/06-engineering-improvement/technical-debt-management.md"
 ---
 
-> [!NOTE]
-> **Candidate Practice / Proposed Framework:** This document contains external research and candidate reference material. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+> [!WARNING]
+> **UNAPPROVED EXTERNAL ENTERPRISE REFERENCE MATERIAL (`status: proposed`):**
+> This document contains unapproved external reference material representing enterprise-scale software maintenance and FinOps frameworks. It is **NOT active agency policy**.
+> 
+> **AI Coding Agents & Engineers MUST NOT enforce its heavy enterprise structures** (such as multi-team FinOps showback/chargeback models or complex enterprise tagging governance) on lean agency projects. Project tailoring defers strictly to [`../../categories/01-development-and-engineering/01-engineering-governance/project-risk-and-tailoring.md`](../../categories/01-development-and-engineering/01-engineering-governance/project-risk-and-tailoring.md).
 
 # Phase 6: Maintain & Improve — A Generalized Guide
 
@@ -236,9 +239,12 @@ Security vulnerability?
 
 ---
 
-## Section 6.5 — Cost Optimization (FinOps)
+## Section 6.5 — Cost Optimization (FinOps Reference)
 
-**Why this section exists:** Cloud costs grow silently. A service that costs $500/month at 1,000 users may cost $5,000/month at 10,000 users — or it may cost $50,000/month if no one is watching. FinOps is the practice of managing cloud spend as a first-class engineering concern.
+**Why this section exists:** Cloud costs grow silently. A service that costs $500/month at 1,000 users may cost $5,000/month at 10,000 users — or it may cost $50,000/month if no one is watching.
+
+> [!NOTE]
+> **Enterprise vs. Small Agency Scope:** Full FinOps frameworks (showback/chargeback to internal business units) are designed for large multi-department corporations. In a small agency context, cost optimization focuses directly on avoiding runaway billing: right-sizing compute instances, setting hard provider budget alerts, eliminating orphaned test disks/snapshots, and ensuring client hosting costs remain within agreed budgets.
 
 ### 6.5.1 The FinOps framework
 

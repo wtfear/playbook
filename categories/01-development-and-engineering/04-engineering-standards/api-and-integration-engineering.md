@@ -60,7 +60,7 @@ Applies to all systems exposing REST/GraphQL endpoints, consuming external third
 ## 5. Evidence that it's done (Checklist)
 - [ ] Client confirms ownership and billing setup for all third-party production service accounts.
 - [ ] OpenAPI 3.1 schema validated with Spectral linter and published in repository.
-- [ ] Webhook handlers verify HMAC signatures and reject unauthenticated payloads with HTTP 401.
+- [ ] Webhook handlers verify HMAC signatures and reject invalid payloads with HTTP 400 Bad Request or 403 Forbidden (per RFC 9110 and standard webhook provider conventions).
 - [ ] Mutation endpoints enforce idempotency key tracking.
 - [ ] Integration tests verify outbound API failure handling and exponential backoff.
 

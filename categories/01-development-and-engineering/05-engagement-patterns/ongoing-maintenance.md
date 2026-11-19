@@ -54,12 +54,11 @@ Maintenance tasks must not be buried in general development backlogs. Teams main
 
 ## 4. SLA Tiers & Operational Rhythms
 
-| Defect Severity | Target Response Time | Target Workaround / Fix | Notification Channel |
-| :--- | :--- | :--- | :--- |
-| **Sev 1 (Critical Outage)** | < 1 hour | < 4 hours | PagerDuty / Emergency Phone Call |
-| **Sev 2 (Degraded Feature)**| < 4 hours | < 24 hours | Dedicated Support Slack / Email |
-| **Sev 3 (Minor Defect)** | Next business day | Next scheduled sprint | Issue Tracker |
-| **Sev 4 (Cosmetic / Tweak)**| 2 business days | Backlog prioritization | Issue Tracker |
+[Pending Founder Decision — see ENG-Q04 and ENG-Q08 in [`../open-questions.md`](../open-questions.md)].
+
+All service level agreements (SLAs), target response times, escalation paths, after-hours coverage, and communication channels are commercial contractual commitments owned by **Sales** ([`../../05-sales/README.md`](../../05-sales/README.md)) and **Legal & Risk Management** ([`../../12-legal-security-and-risk-management/README.md`](../../12-legal-security-and-risk-management/README.md)) on a per-contract basis.
+
+Engineering does not establish unilateral SLA numbers or emergency on-call promises in technical documentation. Technical teams execute against the specific SLA schedule agreed in the signed client Statement of Work (SOW) or Maintenance Agreement.
 
 ---
 

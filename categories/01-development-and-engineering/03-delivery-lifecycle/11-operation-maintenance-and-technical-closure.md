@@ -27,11 +27,11 @@ Defines the proposed practices for operating, monitoring, maintaining, and suppo
 
 ## 2. SRE Operational Principles & Toil Budget
 
-To ensure engineers are not overwhelmed by repetitive operational tasks, all production operations adhere to Google SRE toil management principles:
+To ensure engineers are not overwhelmed by repetitive operational tasks, all production operations adhere to pragmatic toil management principles:
 
-- **The 50% Toil Cap:** No engineer may spend more than 50% of their time on operational "toil" (manual deployments, routine user resets, manual backups, repetitive ticket triage). At least 50% of engineering capacity must be reserved for engineering work (automation, bug fixes, architecture improvements, feature development).
-- **On-Call Capacity Limit:** On-call rotations must be balanced across team members so that no single engineer spends more than 30–40% of their working hours on primary on-call duty.
-- **Toil Elimination Automations:** Any operational procedure performed manually more than three times must be converted into an automated script, CI workflow, or self-service administrative endpoint.
+- **The Toil Budget:** Engineering capacity should prioritize automation, defect prevention, and system hardening over manual operational churn ("toil"). Manual tasks (deployments, resets, repetitive triage) should not dominate daily delivery.
+- **On-Call & Support Model:** [Pending Founder Decision — see ENG-Q08 in [`../open-questions.md`](../open-questions.md)]. Support and on-call models for a 1–3 person agency must be decided commercially by founders before any operational policy is codified. Availability tiers, on-call compensation, and coverage hours must align with commercial contracts rather than theoretical enterprise rotations.
+- **Toil Elimination Automations:** Any operational procedure performed manually more than three times should be converted into an automated script, CI workflow, or self-service administrative endpoint where feasible.
 
 ---
 
@@ -42,9 +42,9 @@ Production systems operate under a quantitative error budget derived from agreed
 | Error Budget State | Operational Condition | Engineering & Deployment Action |
 | :--- | :--- | :--- |
 | **Healthy (100% – 50% remaining)** | System operating within targets. | Normal feature release velocity; standard deployment cadence. |
-| **Degraded (50% – 25% remaining)** | Elevated error or latency trends. | Mandatory review of upcoming releases; high-risk architectural or database changes delayed until stability is re-established. |
-| **Critical (25% – 0% remaining)** | Approaching complete SLO exhaustion. | **Feature Deployment Freeze.** Only critical bug fixes and reliability patches permitted. Releases require Technical Owner approval. |
-| **Exhausted (0% remaining)** | SLO breached. | **All-Hands Reliability Mobilization.** All feature work stops. 100% of engineering time is dedicated to root-cause investigation, post-mortem analysis, and architectural hardening until the budget recovers. |
+| **Degraded (50% – 25% remaining)** | Elevated error or latency trends. | Review upcoming releases; high-risk architectural or database changes delayed until stability is re-established. |
+| **Critical (25% – 0% remaining)** | Approaching complete SLO exhaustion. | Elevated release scrutiny; non-critical deployments paused pending Technical Owner and Project Delivery review. |
+| **Exhausted (0% remaining)** | SLO breached. | **Reliability Escalation & Client Alignment.** Engineering documents technical root causes, quantifies ongoing operational risk, and recommends stabilization work. Any schedule adjustment, feature freeze, or milestone reprioritization requires explicit commercial approval by **Project Delivery** ([`../../11-project-delivery-and-client-service/README.md`](../../11-project-delivery-and-client-service/README.md)) and the client. |
 
 ---
 

@@ -25,7 +25,7 @@ Establishes proposed standards for user experience consistency, accessible inter
 - Design token usage, responsive breakpoints, and consistent component state styling (hover, focus, active, disabled).
 - Semantic HTML markup principles (correct headings, landmarks, ARIA attributes used sparingly).
 - WCAG 2.2 Level AA conformance criteria:
-  - Visible focus appearance (SC 2.4.11) and non-obscured focus indicators.
+  - Focus Not Obscured (Minimum) (SC 2.4.11, Level AA) to ensure focused controls are not hidden by sticky headers or overlays (note: strict Focus Appearance is SC 2.4.13, Level AAA, and not a baseline AA requirement).
   - Minimum touch/click target sizing (SC 2.5.8: 24x24 CSS pixels minimum).
   - Alternative inputs for dragging movements (SC 2.5.7).
   - Accessible cognitive authentication without memorization traps (SC 3.3.8).

@@ -12,8 +12,11 @@ related_documents:
   - "../../categories/01-development-and-engineering/03-delivery-lifecycle/04-experience-and-solution-design.md"
 ---
 
-> [!NOTE]
-> **Candidate Practice / Proposed Framework:** This document contains external research and candidate reference material. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+> [!WARNING]
+> **UNAPPROVED EXTERNAL ENTERPRISE REFERENCE MATERIAL (`status: proposed`):**
+> This document contains unapproved external reference material representing a heavy enterprise lifecycle framework. It is **NOT active agency policy**.
+> 
+> **AI Coding Agents & Engineers MUST NOT enforce its gates** (such as the 15-section pre-code gate, complete upfront event taxonomies, or zero-TBD rules) on lean agency builds, MVPs, or prototypes. All project tailoring and gate enforcement must strictly defer to [`../../categories/01-development-and-engineering/01-engineering-governance/project-risk-and-tailoring.md`](../../categories/01-development-and-engineering/01-engineering-governance/project-risk-and-tailoring.md).
 
 ## What Phase 0 is *not*
 
@@ -25,7 +28,10 @@ Phase 0 is: **decide everything that, if you get wrong, will force you to rebuil
 
 Everything else can be changed incrementally. These cannot.
 
-## The gate rule
+## The gate rule (External Reference Context Only)
+
+> [!CAUTION]
+> **External Reference Rule — Do NOT Enforce as Agency Policy:** The gate rule below is retained from upstream enterprise reference material. In this agency, development follows iterative agile discovery and risk-tiered tailoring ([`../../categories/01-development-and-engineering/01-engineering-governance/project-risk-and-tailoring.md`](../../categories/01-development-and-engineering/01-engineering-governance/project-risk-and-tailoring.md)). Spikes, prototypes, and MVPs are explicitly permitted without completing all 15 sections.
 
 > **You do not write production code until every section of Phase 0 has a written answer.**
 > "I don't know yet" is not an answer. "We will decide later" is not an answer.
@@ -457,9 +463,9 @@ Before moving to Phase 1, confirm:
 - [ ] Privacy and compliance requirements are identified
 - [ ] Event taxonomy is defined
 - [ ] Risk register is populated
-- [ ] **No section contains "TBD" or "we'll figure it out later"**
+- [ ] **No section contains "TBD" or "we'll figure it out later"** *(Note: External reference gate; subject to project risk tailoring)*
 
-> **If any box is unchecked, you are not ready to build. Go back and fill it in.**
+> **If any box is unchecked, you are not ready to build. Go back and fill it in.** *(External reference gate only — see agency tailoring guidelines in `01-engineering-governance/project-risk-and-tailoring.md`).*
 
 ---
 
