@@ -7,14 +7,17 @@ owner: null
 last_reviewed: null
 related_documents:
   - "./README.md"
-  - "./02-discovery-and-requirements.md"
-  - "./04-experience-and-solution-design.md"
-  - "../01-engineering-governance/review-gates-and-evidence.md"
-  - "../04-engineering-standards/observability-and-operational-readiness.md"
-  - "../04-engineering-standards/security-and-data-protection.md"
+  - "../categories/01-development-and-engineering/03-delivery-lifecycle/02-discovery-and-requirements.md"
+  - "../categories/01-development-and-engineering/03-delivery-lifecycle/04-experience-and-solution-design.md"
+  - "../categories/01-development-and-engineering/01-engineering-governance/review-gates-and-evidence.md"
+  - "../categories/01-development-and-engineering/04-engineering-standards/observability-and-operational-readiness.md"
+  - "../categories/01-development-and-engineering/04-engineering-standards/security-and-privacy-engineering.md"
 ---
 
 # Technical Foundation & System Design Document Template
+
+> [!NOTE]
+> **Candidate Template / Proposed Framework:** This template is candidate material for evaluation and scoping. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
 
 This document provides a comprehensive system architecture and foundation contract template for all technical initiatives, client engagements, and production services. It establishes the critical system parameters that are expensive or impossible to change once software is running in production.
 

@@ -1,11 +1,17 @@
-# Category 09: Internal Operations and Work Management
-
-```yaml
+---
+title: "Category 09: Internal Operations and Work Management"
+document_type: reference
 category: "09-internal-operations-and-work-management"
 status: proposed
+owner: null
 last_reviewed: null
-owner: null # unassigned
-```
+related_documents:
+  - "../../README.md"
+  - "../../structure-guide.md"
+  - "../README.md"
+---
+
+# Category 09: Internal Operations and Work Management
 
 ## 1. Purpose
 Defines how everyday work within the agency is planned, prioritized, assigned, coordinated, and executed. It establishes the internal operating cadences, meeting hygiene, communication standards, and administrative workflows that keep the business running smoothly.

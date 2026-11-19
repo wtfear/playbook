@@ -15,6 +15,10 @@ related_documents:
 
 # Lifecycle 10: Handover and Support Transition
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines the proposed procedure for transferring repository ownership, cloud infrastructure, operational documentation, and technical access to the client, and transitioning the deliverable into either a warranty period, ongoing maintenance retainer, or full agency exit.
 

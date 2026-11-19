@@ -13,6 +13,10 @@ related_documents:
 
 # 04. Engineering Standards
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 This directory defines the agency's proposed technical standards, architectural practices, and engineering quality guidelines that apply across all software, application, and automation deliverables.
 
 ## Purpose
@@ -38,7 +42,9 @@ To establish shared, reusable engineering practices that guarantee consistent te
 | [`api-and-integration-engineering.md`](./api-and-integration-engineering.md) | REST, GraphQL, webhooks, error handling | OpenAPI 3.1, RFC 7807 |
 | [`data-databases-and-test-data.md`](./data-databases-and-test-data.md) | Migrations, indexing, test data masking | Evolutionary Database Design |
 | [`security-and-privacy-engineering.md`](./security-and-privacy-engineering.md) | Threat modeling, OWASP Top 10, sanitization | OWASP ASVS, NIST SP 800-218 |
+| [`validation-across-lifecycle.md`](./validation-across-lifecycle.md) | Requirements, server inputs, and client acceptance | NIST SSDF, OWASP Input Validation |
 | [`testing-and-quality-engineering.md`](./testing-and-quality-engineering.md) | Unit, integration, E2E testing pyramid | DORA Automated Testing |
+| [`reliability-and-resilience.md`](./reliability-and-resilience.md) | Timeouts, retries with jitter, idempotency, circuit breakers | SRE Resilience Patterns |
 | [`performance-and-capacity.md`](./performance-and-capacity.md) | Latency, profiling, Core Web Vitals, sizing | Google Core Web Vitals |
 | [`ci-cd-and-release-engineering.md`](./ci-cd-and-release-engineering.md) | Automated build pipelines, deployments | DORA Continuous Delivery |
 | [`observability-and-operational-readiness.md`](./observability-and-operational-readiness.md) | Telemetry, logging, APM, alerting runbooks | OpenTelemetry, SRE Principles |

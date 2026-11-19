@@ -14,6 +14,10 @@ related_documents:
 
 # Lifecycle 12: Retirement and Client Exit
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines the proposed procedure for safely decommissioning software systems, conducting secure data export and sanitization, shutting down cloud infrastructure, terminating integrations, and recording formal technical exit upon product sunset or client relationship termination.
 

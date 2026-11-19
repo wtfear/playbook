@@ -15,6 +15,10 @@ related_documents:
 
 # Lifecycle 08: Verification and Client Acceptance
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines the proposed verification procedures for validating software deliverables against acceptance criteria, triaging defects, conducting security and accessibility reviews, and supporting client User Acceptance Testing (UAT) prior to production deployment.
 

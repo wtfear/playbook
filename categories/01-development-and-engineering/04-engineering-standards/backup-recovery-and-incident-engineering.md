@@ -14,6 +14,10 @@ related_documents:
 
 # Standard: Backup, Recovery, and Incident Engineering
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Establishes proposed standards for automated data backups, restoration verification, disaster recovery objectives, technical incident response procedures, and blameless root-cause investigations.
 

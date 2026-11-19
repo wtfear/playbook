@@ -1,11 +1,17 @@
-# Category 12: Legal, Security, and Risk Management
-
-```yaml
+---
+title: "Category 12: Legal, Security, and Risk Management"
+document_type: reference
 category: "12-legal-security-and-risk-management"
 status: proposed
+owner: null
 last_reviewed: null
-owner: null # unassigned
-```
+related_documents:
+  - "../../README.md"
+  - "../../structure-guide.md"
+  - "../README.md"
+---
+
+# Category 12: Legal, Security, and Risk Management
 
 ## 1. Purpose
 Defines the agency's legal protections, contractual safeguards, intellectual property rights, data security policies, credential controls, vendor risk evaluations, incident response procedures, and business continuity plans.

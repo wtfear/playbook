@@ -14,6 +14,10 @@ related_documents:
 
 # Improvement: Retrospectives and Root-Cause Learning
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Establishes proposed practices for conducting blameless milestone retrospectives, investigating technical failures through Root Cause Analysis (RCA), and systematically feeding lessons learned back into agency engineering standards and checklists.
 

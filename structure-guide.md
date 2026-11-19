@@ -18,8 +18,17 @@ Playbook/
 │
 ├── categories/                         # The 13 operational responsibility categories
 │   ├── README.md                       # Category taxonomy overview and core boundaries
-│   ├── 01-development-and-engineering/
-│   │   └── README.md                   # Purpose, scope, candidate playbooks, handoffs, open questions
+│   ├── 01-development-and-engineering/ # Fully scaffolded engineering responsibility area
+│   │   ├── README.md                   # Orientation, boundaries, and navigation
+│   │   ├── coverage-matrix.md          # Canonical homes for all engineering subjects
+│   │   ├── development-roadmap.md      # Topic-by-topic drafting and validation progress
+│   │   ├── open-questions.md           # Engineering architectural open questions
+│   │   ├── 01-engineering-governance/  # Roles, risk tailoring, review gates, exceptions, decisions
+│   │   ├── 02-service-specialties/     # 8 candidate technical domain specializations
+│   │   ├── 03-delivery-lifecycle/      # 12-stage technical progression from intake to retirement
+│   │   ├── 04-engineering-standards/   # 16 reusable technical standards (code, CI/CD, data, secrets)
+│   │   ├── 05-engagement-patterns/     # 5 commercial engagement delivery patterns
+│   │   └── 06-engineering-improvement/ # Continuous improvement, DORA metrics, debt management
 │   ├── 02-client-acquisition/
 │   │   └── README.md                   # Prospect research, outreach, referrals, pipeline generation
 │   ├── 03-business-strategy-and-governance/
@@ -51,6 +60,7 @@ Playbook/
 │   ├── playbook-template.md            # Template for situational guidance and human judgment
 │   ├── workflow-template.md            # Template for step-by-step repeatable operational flows
 │   ├── checklist-template.md           # Template for compact verification lists
+│   ├── foundation-document-template.md # Template for system foundation contracts and production gates
 │   ├── research-note-template.md       # Template for external citations, evidence, and benchmarks
 │   ├── decision-record-template.md     # Template for Operating Decision Records (ODRs)
 │   ├── meeting-note-template.md        # Template for internal and strategic meeting notes
@@ -60,7 +70,9 @@ Playbook/
 │   └── README.md                       # ODR index and decision governance
 │
 ├── research/                           # Central repository for external research and candidate findings
-│   └── README.md                       # Research index and guidance on centralized discovery
+│   ├── README.md                       # Research index and guidance on centralized discovery
+│   ├── 01-development-and-engineering/ # Engineering evidence register, candidate practices, validation
+│   └── production-lifecycle/           # 8-phase application production lifecycle reference framework
 │
 ├── ideas/                              # Strategic ideas, experimentation proposals, and review logs
 │   └── README.md                       # Staging ground for concepts prior to research and drafting
@@ -79,9 +91,9 @@ Playbook/
 | Directory | Core Purpose | Content Types Permitted |
 | :--- | :--- | :--- |
 | `categories/` | Houses the 13 foundational operating categories. Each category represents an operational responsibility area. | Policies, playbooks, workflows, checklists, references specific to that category. |
-| `templates/` | Single source of truth for all documentation structures and frontmatter formats. | Standard `.md` templates only. |
+| `templates/` | Single source of truth for all documentation structures, system contracts, and frontmatter formats. | Standard `.md` templates only. |
 | `decisions/` | Immutable historical log of approved Operating Decision Records (ODRs). | ODR files (`odr-XXX-[title].md`). |
-| `research/` | Centralized repository of external research notes, market analyses, and benchmark findings. | Research notes (`rn-[category]-[topic].md`). |
+| `research/` | Centralized repository of external research notes, market analyses, benchmark findings, and lifecycle frameworks. | Research notes and reference frameworks (`rn-[category]-[topic].md` or topic folders). |
 | `ideas/` | Staging ground for rough concepts, potential service offerings, and founder brainstorms. | Idea backlog files and review logs. |
 | `meetings/` | Formal records of team meetings, category deep dives, and strategic retreats. | Meeting notes (`YYYY-MM-DD-[topic].md`). |
 | `archive/` | Retired documents kept for audit history. | Superseded files with deprecation headers. |

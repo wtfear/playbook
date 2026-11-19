@@ -14,6 +14,10 @@ related_documents:
 
 # Pattern: Modernization and Migrations
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines proposed engineering patterns for refactoring legacy software systems, executing cloud platform migrations, upgrading runtime versions, and performing high-stakes database migrations with minimal operational disruption.
 

@@ -12,6 +12,10 @@ related_documents:
 
 # Technical Service Catalog
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Provides a consolidated technical overview of potential technical service domains under evaluation by the engineering team, tracking activation readiness, core capabilities, and dependencies.
 

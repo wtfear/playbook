@@ -16,6 +16,10 @@ related_documents:
 
 # 01. Engineering Governance
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 This directory defines the proposed governance framework, technical roles, review gates, exception mechanisms, and decision-making processes for Development and Engineering.
 
 ## Purpose

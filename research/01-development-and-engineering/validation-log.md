@@ -1,6 +1,6 @@
 ---
 title: "Engineering Validation Log: Scenario Walkthroughs"
-document_type: reference
+document_type: research-note
 category: "01-development-and-engineering"
 status: proposed
 owner: null
@@ -8,8 +8,12 @@ last_reviewed: null
 related_documents:
   - "./README.md"
   - "./applicability-matrix.md"
-  - "../coverage-matrix.md"
+  - "../../categories/01-development-and-engineering/coverage-matrix.md"
 ---
+
+> [!NOTE]
+> **Candidate Practice / Proposed Framework:** This document contains research and evaluation materials. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 
 # Engineering Validation Log: Scenario Walkthroughs
 
@@ -43,7 +47,7 @@ A local service business requires a responsive marketing website with a contact 
 ### 5. Architectural Findings & Gaps Identified
 - *Completeness Check:* All necessary steps are present.
 - *Unnecessary Steps Removed:* Full automated end-to-end regression test suite and blue/green release pipelines are bypassed under Tier 1 tailoring.
-- *Unresolved Decision:* Who owns ongoing domain registration and hosting payment (Agency credit card vs. Client direct billing)? Tracked in [`../open-questions.md`](../open-questions.md).
+- *Unresolved Decision:* Who owns ongoing domain registration and hosting payment (Agency credit card vs. Client direct billing)? Tracked in [`../open-questions.md`](../../categories/01-development-and-engineering/open-questions.md).
 
 ---
 
@@ -70,7 +74,7 @@ A B2B SaaS startup commissions an MVP web portal with user registration, role-ba
 
 ### 5. Architectural Findings & Gaps Identified
 - *Completeness Check:* Architecture cleanly captures data isolation, secrets hygiene, and migration safety.
-- *Unresolved Decision:* What default authentication provider (Auth0, Supabase, Clerk, custom JWT) is agency standard? Tracked in [`../open-questions.md`](../open-questions.md).
+- *Unresolved Decision:* What default authentication provider (Auth0, Supabase, Clerk, custom JWT) is agency standard? Tracked in [`../open-questions.md`](../../categories/01-development-and-engineering/open-questions.md).
 
 ---
 
@@ -96,7 +100,7 @@ An enterprise client requests an automated data pipeline extracting orders from 
 
 ### 5. Architectural Findings & Gaps Identified
 - *Completeness Check:* Dedicated guidance for idempotency, retry storms, and webhook secret verification was successfully integrated into the automation specialty and API standards.
-- *Unresolved Decision:* Who receives operational alerts when external third-party APIs experience downtime? Tracked in [`../open-questions.md`](../open-questions.md).
+- *Unresolved Decision:* Who receives operational alerts when external third-party APIs experience downtime? Tracked in [`../open-questions.md`](../../categories/01-development-and-engineering/open-questions.md).
 
 ---
 
@@ -172,7 +176,7 @@ A 4-month custom software build concludes. The client has hired their own in-hou
 
 ### 5. Architectural Findings & Gaps Identified
 - *Completeness Check:* Clear verification checks ensure the agency does not retain lingering access or orphaned infrastructure incurring unexpected cloud bills.
-- *Unresolved Decision:* What length of post-handover transitional Q&A support is included in the base project scope? Tracked in [`../open-questions.md`](../open-questions.md).
+- *Unresolved Decision:* What length of post-handover transitional Q&A support is included in the base project scope? Tracked in [`../open-questions.md`](../../categories/01-development-and-engineering/open-questions.md).
 
 ---
 

@@ -13,6 +13,10 @@ related_documents:
 
 # Development and Engineering Open Questions
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 This register tracks unresolved architectural, operational, and technical governance questions specific to the Development and Engineering category.
 
 > [!NOTE]
@@ -55,3 +59,26 @@ This register tracks unresolved architectural, operational, and technical govern
 - **Context:** Clients frequently expect "free lifetime bug fixes" for any issue discovered after launch, leading to disputes over whether a bug is a defect in the original SOW or an environmental change (e.g., third-party API update, browser deprecation).
 - **Trade-offs:** A generous warranty (e.g., 60 days) builds client goodwill but creates open-ended unpaid developer commitments. A short warranty (e.g., 14 days) requires strict acceptance testing discipline.
 - **Proposed Direction:** A strict 14-day post-launch warranty limited to defects reproducing against original written acceptance criteria, followed by a mandatory transition to a monthly maintenance retainer for ongoing support.
+
+---
+
+## 3. The 4 Agency Realities as Decision Drivers
+
+All open questions, architectural evaluations, and engineering standards in Category 01 are evaluated against four operational constraints that reflect the agency's commercial and delivery model:
+
+### 1. Multi-Client Isolation on Shared Tools
+- **Operating Context:** Engineers work across multiple client engagements simultaneously or consecutively using agency laptops, development tooling, CI/CD runners, and communications platforms.
+- **Decision Rule:** Architectural patterns and developer workflows must enforce strict isolation between client codebases, data, and credentials. Shared multi-tenant staging databases or co-mingled secrets across clients are strictly prohibited. Every project must maintain independent IAM boundaries, isolated repositories, and zero data leakage paths.
+
+### 2. Foreign Clients and Cross-Border Data Privacy (GDPR, DPDP Act 2023)
+- **Operating Context:** The agency serves domestic and international clients subject to diverse data protection regimes (e.g., EU GDPR, India DPDP Act 2023, US state privacy acts).
+- **Division of Responsibility:** Category 12 (`Legal, Security, and Risk Management`) establishes the legal requirements, privacy notices, data classification tiers, and client contract terms. Category 01 (`Development and Engineering`) is strictly responsible for implementing technical controls: PII masking, encryption at rest and in transit, data residency routing, audit logging, and automated data retention and deletion workflows.
+
+### 3. Small-Team Lightweight Constraint
+- **Operating Context:** Delivery teams are small and agile (typically 1 to 5 engineers per engagement) without dedicated full-time QA departments, Site Reliability Engineers, or 24/7 operations centers.
+- **Decision Rule:** Engineering policies and review gates must be lean, practical, and highly automated. Bureaucratic approval chains that paralyze velocity are rejected. If a quality or security control cannot be executed by a small team or automated via CI/CD, it must be simplified or scaled back to a workable tier.
+
+### 4. AI-Assisted Coding Boundaries and IP Hygiene
+- **Operating Context:** Engineers leverage modern AI coding assistants to accelerate development, research, and documentation.
+- **Decision Rule:** High developer velocity must never compromise client confidentiality or intellectual property rights. AI tools must be evaluated for zero-data-retention terms; proprietary client business logic or secrets must never be exposed to public AI training corpuses; and human developers retain 100% accountability for verifying the correctness, security, performance, and licensing compliance of every line of committed code.
+

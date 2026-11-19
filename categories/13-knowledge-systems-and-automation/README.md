@@ -1,11 +1,17 @@
-# Category 13: Knowledge, Systems, and Automation
-
-```yaml
+---
+title: "Category 13: Knowledge, Systems, and Automation"
+document_type: reference
 category: "13-knowledge-systems-and-automation"
 status: proposed
+owner: null
 last_reviewed: null
-owner: null # unassigned
-```
+related_documents:
+  - "../../README.md"
+  - "../../structure-guide.md"
+  - "../README.md"
+---
+
+# Category 13: Knowledge, Systems, and Automation
 
 ## 1. Purpose
 Defines how the agency captures, curates, organizes, retrieves, and preserves operational knowledge, manages its internal tooling ecosystem, governs artificial intelligence (AI) usage, and safely designs internal workflow automations.

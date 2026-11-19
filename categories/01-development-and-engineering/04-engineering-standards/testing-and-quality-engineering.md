@@ -7,12 +7,16 @@ owner: null
 last_reviewed: null
 related_documents:
   - "./README.md"
-  - "../00-research-and-validation/evidence-register.md"
+  - "../../../research/01-development-and-engineering/evidence-register.md"
   - "./ci-cd-and-release-engineering.md"
   - "../03-delivery-lifecycle/08-verification-and-client-acceptance.md"
 ---
 
 # Standard: Testing and Quality Engineering
+
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 
 ## 1. Purpose
 Establishes proposed standards for automated testing pyramids, test design, quality verification gates, defect management, and continuous feedback to ensure software reliability without slowing developer velocity.
@@ -33,7 +37,7 @@ Establishes proposed standards for automated testing pyramids, test design, qual
 Applies to all software engineering deliverables, tailored according to project risk tier.
 
 ## 4. Related Documents
-- [`../00-research-and-validation/evidence-register.md`](../00-research-and-validation/evidence-register.md): DORA Automated Testing capabilities.
+- [`../../../research/01-development-and-engineering/evidence-register.md`](../../../research/01-development-and-engineering/evidence-register.md): DORA Automated Testing capabilities.
 - [`./ci-cd-and-release-engineering.md`](./ci-cd-and-release-engineering.md): Automated CI execution.
 - [`../03-delivery-lifecycle/08-verification-and-client-acceptance.md`](../03-delivery-lifecycle/08-verification-and-client-acceptance.md): Acceptance verification.
 

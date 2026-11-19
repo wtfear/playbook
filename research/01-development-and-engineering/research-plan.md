@@ -1,6 +1,6 @@
 ---
 title: "Engineering Research and Evidence Plan"
-document_type: reference
+document_type: research-note
 category: "01-development-and-engineering"
 status: proposed
 owner: null
@@ -10,6 +10,10 @@ related_documents:
   - "./evidence-register.md"
   - "./candidate-practices.md"
 ---
+
+> [!NOTE]
+> **Candidate Practice / Proposed Framework:** This document contains research and evaluation materials. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 
 # Engineering Research and Evidence Plan
 
@@ -57,7 +61,7 @@ flowchart LR
 
 ## 5. Candidate Evidence Artifacts
 - Formal entries in [`evidence-register.md`](./evidence-register.md).
-- Detailed source notes in central repository [`../../research/`](../../../research/README.md).
+- Detailed source notes in central repository [`../../research/`](../README.md).
 - Candidate practice entries in [`candidate-practices.md`](./candidate-practices.md).
 
 ## 6. Next Actions

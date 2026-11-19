@@ -1,3 +1,19 @@
+---
+title: "Research: Production Lifecycle - Phase 6: Maintain & Improve"
+document_type: research-note
+category: "01-development-and-engineering"
+status: proposed
+owner: null
+last_reviewed: null
+related_documents:
+  - "./README.md"
+  - "../../categories/01-development-and-engineering/05-engagement-patterns/ongoing-maintenance.md"
+  - "../../categories/01-development-and-engineering/06-engineering-improvement/technical-debt-management.md"
+---
+
+> [!NOTE]
+> **Candidate Practice / Proposed Framework:** This document contains external research and candidate reference material. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 # Phase 6: Maintain & Improve — A Generalized Guide
 
 ## What Phase 6 actually is

@@ -13,6 +13,10 @@ related_documents:
 
 # Engineering Decisions and Architecture Decision Records
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Establishes the process for proposing, evaluating, and recording technical and architectural decisions, linking project-level Architectural Decision Records (ADRs) with agency-wide Operating Decision Records (ODRs).
 

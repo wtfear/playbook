@@ -1,3 +1,15 @@
+---
+title: "Archive and Deprecated Documents Overview"
+document_type: reference
+category: "13-knowledge-systems-and-automation"
+status: proposed
+owner: null
+last_reviewed: null
+related_documents:
+  - "../README.md"
+  - "../structure-guide.md"
+---
+
 # Archive and Deprecated Documents
 
 This directory houses superseded, retired, or obsolete documents across the agency knowledge base.

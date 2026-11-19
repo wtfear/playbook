@@ -1,3 +1,17 @@
+---
+title: "Research and Source Notes Overview"
+document_type: reference
+category: "13-knowledge-systems-and-automation"
+status: proposed
+owner: null
+last_reviewed: null
+related_documents:
+  - "../README.md"
+  - "../structure-guide.md"
+  - "./01-development-and-engineering/README.md"
+  - "./production-lifecycle/README.md"
+---
+
 # Research and Source Notes
 
 This directory is the central repository for external research, industry benchmarks, market analyses, literature notes, and candidate practices investigated for the agency.
@@ -21,6 +35,7 @@ We deliberately house all research notes centrally in `research/` rather than sc
 
 ## Research Index
 
-| File | Topic | Primary Category | Status | Date Added |
-| :--- | :--- | :--- | :--- | :--- |
-| *None yet* | *Awaiting initial research phase* | - | - | - |
+| Directory / Collection | Topic | Primary Category | Status | Key Focus |
+| :--- | :--- | :--- | :---: | :--- |
+| [`01-development-and-engineering/`](./01-development-and-engineering/README.md) | Engineering Standards & Evidence | `01-development-and-engineering` | `proposed` | Primary citations (NIST, DORA, W3C), applicability matrix, candidate practices, validation logs. |
+| [`production-lifecycle/`](./production-lifecycle/README.md) | Production Lifecycle Framework | `01-development-and-engineering` | `proposed` | 8-phase reference framework (Phases 0–7) covering production readiness, telemetry, release safety, and retirement. |

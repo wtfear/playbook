@@ -14,6 +14,10 @@ related_documents:
 
 # Standard: Source Control and Change Integration
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Establishes proposed conventions for Git repository structure, branching models, commit message formats, and change integration practices to maintain clean, auditable, and bisectable version history.
 
@@ -29,7 +33,7 @@ Establishes proposed conventions for Git repository structure, branching models,
 Applies to all source code repositories managed by the agency or delivered to clients.
 
 ## 4. Related Documents
-- [`../00-research-and-validation/evidence-register.md`](../00-research-and-validation/evidence-register.md): DORA Version Control capabilities.
+- [`../../../research/01-development-and-engineering/evidence-register.md`](../../../research/01-development-and-engineering/evidence-register.md): DORA Version Control capabilities.
 - [`../03-delivery-lifecycle/06-project-engineering-setup.md`](../03-delivery-lifecycle/06-project-engineering-setup.md): Initial repository setup.
 - [`./ci-cd-and-release-engineering.md`](./ci-cd-and-release-engineering.md): Automated CI triggering.
 

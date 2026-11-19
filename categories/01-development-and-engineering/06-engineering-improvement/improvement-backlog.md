@@ -13,6 +13,10 @@ related_documents:
 
 # Improvement: Engineering Improvement Backlog
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Provides a central inventory and tracking mechanism for proposed internal developer tool improvements, CI/CD pipeline optimizations, process refinements, and architectural enhancements.
 

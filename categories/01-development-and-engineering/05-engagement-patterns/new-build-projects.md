@@ -13,6 +13,10 @@ related_documents:
 
 # Pattern: New Build Projects
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines proposed engineering practices for executing greenfield software development projects, where the agency builds an application or platform from the ground up through the complete technical delivery lifecycle.
 

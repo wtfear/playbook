@@ -71,9 +71,11 @@ Playbook/
 │   ├── 12-legal-security-and-risk-management/  # Contracts, IP, confidentiality, secrets, compliance
 │   └── 13-knowledge-systems-and-automation/    # Knowledge governance, ODRs, AI ethics, automation
 │
-├── templates/                          # Standardized templates for all official document types
+├── templates/                          # Standardized templates for all official document types and system contracts
 ├── decisions/                          # Formal Operating Decision Records (ODRs)
 ├── research/                           # Central repository for external benchmarks & research notes
+│   ├── 01-development-and-engineering/ # Engineering evidence register, candidate practices, validation
+│   └── production-lifecycle/           # 8-phase application production lifecycle reference framework
 ├── ideas/                              # Staging area for raw concepts & review records
 ├── meetings/                           # Formal records of team discussions & agendas
 └── archive/                            # Superseded and retired documentation

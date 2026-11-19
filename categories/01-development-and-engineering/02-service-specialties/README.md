@@ -13,6 +13,10 @@ related_documents:
 
 # 02. Service Specialties
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 This directory houses candidate technical service specialties that the agency may research, develop, and deliver.
 
 > [!WARNING]

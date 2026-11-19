@@ -13,6 +13,10 @@ related_documents:
 
 # Review Gates and Engineering Evidence
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines proposed milestone review gates across the delivery lifecycle, specifying the mandatory technical evidence required before a project advances to subsequent stages.
 

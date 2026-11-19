@@ -1,6 +1,6 @@
 ---
 title: "Engineering Evidence Register"
-document_type: reference
+document_type: research-note
 category: "01-development-and-engineering"
 status: proposed
 owner: null
@@ -9,8 +9,13 @@ related_documents:
   - "./README.md"
   - "./research-plan.md"
   - "./candidate-practices.md"
-  - "../../../research/README.md"
+  - "../README.md"
+  - "../../categories/01-development-and-engineering/README.md"
 ---
+
+> [!NOTE]
+> **Candidate Practice / Proposed Framework:** This document contains research and evaluation materials. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 
 # Engineering Evidence Register
 

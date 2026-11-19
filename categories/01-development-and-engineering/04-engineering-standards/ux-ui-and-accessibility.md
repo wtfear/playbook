@@ -7,12 +7,16 @@ owner: null
 last_reviewed: null
 related_documents:
   - "./README.md"
-  - "../00-research-and-validation/evidence-register.md"
+  - "../../../research/01-development-and-engineering/evidence-register.md"
   - "../03-delivery-lifecycle/04-experience-and-solution-design.md"
   - "../03-delivery-lifecycle/08-verification-and-client-acceptance.md"
 ---
 
 # Standard: UX, UI, and Accessibility
+
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 
 ## 1. Purpose
 Establishes proposed standards for user experience consistency, accessible interface design, responsive layout behavior, and conformance with W3C Web Content Accessibility Guidelines (WCAG 2.2 Level AA).
@@ -33,7 +37,7 @@ Establishes proposed standards for user experience consistency, accessible inter
 Applies to all user-facing web applications, client portals, mobile applications, and marketing websites.
 
 ## 4. Related Documents
-- [`../00-research-and-validation/evidence-register.md`](../00-research-and-validation/evidence-register.md): W3C WCAG 2.2 evidence.
+- [`../../../research/01-development-and-engineering/evidence-register.md`](../../../research/01-development-and-engineering/evidence-register.md): W3C WCAG 2.2 evidence.
 - [`../03-delivery-lifecycle/04-experience-and-solution-design.md`](../03-delivery-lifecycle/04-experience-and-solution-design.md): Design stage.
 - [`../03-delivery-lifecycle/08-verification-and-client-acceptance.md`](../03-delivery-lifecycle/08-verification-and-client-acceptance.md): Acceptance verification.
 

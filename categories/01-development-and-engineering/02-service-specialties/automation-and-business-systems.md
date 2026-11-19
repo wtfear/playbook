@@ -8,54 +8,72 @@ last_reviewed: null
 related_documents:
   - "./README.md"
   - "../03-delivery-lifecycle/README.md"
-  - "../04-engineering-standards/api-and-integration-engineering.md"
-  - "../04-engineering-standards/observability-and-operational-readiness.md"
+  - "../04-engineering-standards/reliability-and-resilience.md"
+  - "../04-engineering-standards/environments-configuration-and-secrets.md"
+  - "../../12-legal-security-and-risk-management/README.md"
 ---
 
 # Specialty: Automation and Business Systems
 
-```yaml
-specialty: automation-and-business-systems
-activation_status: unconfirmed
-prescribed_stack: none # Intentionally unconfirmed
-```
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
 
-## 1. Purpose
-Explores the candidate technical requirements, failure modes, and recovery patterns for delivering robust business process automations, iPaaS workflows, internal tools, and multi-app data synchronizations.
+---
 
-## 2. Proposed Scope
-- Workflow automation platforms (e.g., n8n, Make, Zapier) and custom code automation scripts.
-- Webhook-driven event triggers, polling schedules, and state synchronization.
-- Idempotent execution patterns to prevent duplicate external actions (e.g., double billing, duplicate emails).
-- Transient failure handling: exponential backoff retries, rate-limit throttling, and circuit breakers.
-- Poison pill handling and dead-letter queue (DLQ) routing.
-- Internal administrative portals (e.g., Retool, Appsmith) for human-in-the-loop exception review.
-- Operational ownership, failure alerting, and runbook-driven recovery.
+## 1. When it applies
+Applies to client engagements delivering workflow automations, internal tooling, business system integrations (e.g., CRM to ERP, billing syncs), low-code/pro-code platforms (n8n, Make, Zapier), and custom serverless automated event pipes. *(Specialty status: proposed & unconfirmed).*
 
-## 3. Applicability
-Relevant when scoping, building, or maintaining workflow automations and internal tooling. (Activation status: **unconfirmed**).
+---
 
-## 4. Related Documents
-- Shared Lifecycle: [`../03-delivery-lifecycle/README.md`](../03-delivery-lifecycle/README.md).
-- Engineering Standards:
-  - [`../04-engineering-standards/api-and-integration-engineering.md`](../04-engineering-standards/api-and-integration-engineering.md): External integration hygiene.
-  - [`../04-engineering-standards/observability-and-operational-readiness.md`](../04-engineering-standards/observability-and-operational-readiness.md): Alerting on failed workflows.
-  - [`../04-engineering-standards/environments-configuration-and-secrets.md`](../04-engineering-standards/environments-configuration-and-secrets.md): Managing OAuth tokens and API secrets.
+## 2. Must (Mandatory Minimum)
+> *Status: [TBD / Pending Approval]*
+>
+> *(Proposed mandatory baseline requirements subject to founder approval).*
 
-## 5. Specialty-Specific Research Questions
-- What are the architectural boundaries between low-code automation tools (e.g., Make, n8n) and custom code microservices?
-- How can automated workflows be version-controlled, code-reviewed, and tested in staging environments prior to production activation?
-- What dead-letter queue pattern provides the simplest manual replay mechanism for non-technical client operators?
+- **Secure Credential Storage & Isolation:** Automation credentials, OAuth tokens, and API secrets must never be hardcoded in workflow nodes or shared spreadsheets. Credentials must reside in platform credential vaults, environment variables, or encrypted secret managers (e.g., AWS Secrets Manager, 1Password Secrets). Multi-client workflows must maintain strictly separated credential scopes.
+- **Automated Failure Alerting & Dead-Letter Handling:** Every automation workflow must have automated error catching that routes execution failures immediately to dedicated alert channels (e.g., Slack `#alerts-ops`, PagerDuty, or email) with execution IDs and payload contexts.
+- **Platform Rate & Execution Limits Adherence:** Workflows must monitor and throttle operations to stay strictly within third-party vendor rate limits (e.g., HubSpot 100 req/10s, Airtable 5 req/s) and monthly execution allowances to prevent account suspension.
 
-## 6. Known Unknowns
-- Client appetite for self-hosted automation engines (e.g., self-hosted n8n) vs. commercial SaaS subscriptions.
-- Legal and operational liability when an automation fails silently and causes business interruption.
-- Commercial support expectations for 24/7 automation monitoring.
+---
 
-## 7. Candidate Evidence and Artifacts
-- Automation Idempotency & Failure Handling Pattern Document.
-- Dead-Letter Queue Monitoring & Replay Runbook.
-- Business System Integration Test Matrix.
+## 3. Should (Recommended Practice & Judgment Guidance)
+- **Idempotency by Design:** Design all automation flows to be re-runnable without side effects. Check for existing records or deduplication hashes before triggering creation actions.
+- **Client Account Ownership:** Automation platform subscriptions (n8n Cloud, Make, Zapier) and connected business app accounts must be owned directly by the client. The agency receives role-based admin/developer access.
+- **Self-Hosted vs. Cloud Automation:** For clients with strict data residency (GDPR/DPDP) or large transaction volumes, evaluate self-hosted automation instances (e.g., n8n on client AWS/GCP) over multi-tenant SaaS tools to minimize per-execution costs.
+- **Small-Team Practicality:** Avoid chaining more than 5 disparate SaaS tools into a single brittle workflow; consolidate transformations in clean serverless scripts where appropriate.
 
-## 8. Next Action
-Conduct technical evaluation of self-hosted vs. cloud-hosted workflow automation engines.
+---
+
+## 4. Common Failure Modes
+- **Silent Automation Failures:** A Zapier or n8n workflow quietly failing due to an expired OAuth refresh token, going unnoticed for 3 weeks while leads or invoices fail to sync.
+- **Third-Party API Rate Limit Lockouts:** A batch automation firing 1,000 simultaneous webhook calls to a CRM, triggering an IP ban and disrupting the client's internal sales team.
+- **Infinite Update Loops:** Workflow A updates System 1, which triggers Workflow B to update System 2, which triggers Workflow A again, consuming the client's entire monthly plan in 20 minutes.
+- **Hardcoded Developer API Keys:** Connecting agency developer personal credentials to client automation nodes; when the developer leaves the agency, the client's business system halts.
+
+---
+
+## 5. Evidence that it's done (Checklist)
+- [ ] All API keys and OAuth connections verified to use client-owned corporate accounts.
+- [ ] Automated error routing node verified via intentional failure test payload.
+- [ ] Platform execution rate limits and pagination boundaries documented in runbook.
+- [ ] Idempotent deduplication checked and verified against duplicate execution.
+- [ ] Workflow recovery runbook authored for client handover.
+
+---
+
+## 6. Template
+- [`../../../templates/engineering-topic-template.md`](../../../templates/engineering-topic-template.md): Standard Topic Template.
+- [`../../../templates/workflow-template.md`](../../../templates/workflow-template.md): Automation Workflow Template.
+
+---
+
+## 7. Handoffs & Cross-Category Boundaries
+- **Sales ([`../../05-sales/README.md`](../../05-sales/README.md)):** Establishes client responsibility for ongoing SaaS automation subscription costs (Make, Zapier, n8n).
+- **Project Delivery ([`../../11-project-delivery-and-client-service/README.md`](../../11-project-delivery-and-client-service/README.md)):** Coordinates business stakeholder UAT for critical business processes (e.g., payroll syncs, order routing).
+- **Legal, Security & Risk ([`../../12-legal-security-and-risk-management/README.md`](../../12-legal-security-and-risk-management/README.md)):** Reviews third-party data processing agreements (DPAs) for automated data transfers.
+
+---
+
+## 8. Open Decisions
+- Should the agency standardize on self-hosted n8n as the primary pro-code automation offering vs. managed Make?
+- What is our standard incident SLA for broken client business automations during business hours?

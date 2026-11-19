@@ -1,6 +1,6 @@
 ---
 title: "Engineering Applicability and Tailoring Matrix"
-document_type: reference
+document_type: research-note
 category: "01-development-and-engineering"
 status: proposed
 owner: null
@@ -8,8 +8,12 @@ last_reviewed: null
 related_documents:
   - "./README.md"
   - "./candidate-practices.md"
-  - "../01-engineering-governance/project-risk-and-tailoring.md"
+  - "../../categories/01-development-and-engineering/01-engineering-governance/project-risk-and-tailoring.md"
 ---
+
+> [!NOTE]
+> **Candidate Practice / Proposed Framework:** This document contains research and evaluation materials. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 
 # Engineering Applicability and Tailoring Matrix
 
@@ -54,4 +58,4 @@ Engineering controls are tailored by evaluating 6 qualitative dimensions:
 ## 4. Tailoring Governance and Approval
 - **Initial Assessment:** Conducted during Lifecycle Stage 01 (*Technical Intake*) and Stage 05 (*Feasibility & Planning*).
 - **Recorded In:** The project's Solution Architecture Document and project repository `README.md`.
-- **Downward Tailoring Exceptions:** If a client requests dropping a standard control (e.g., bypassing code review to accelerate release), this constitutes a formal risk waiver governed by [`../01-engineering-governance/exceptions-and-escalation.md`](../01-engineering-governance/exceptions-and-escalation.md).
+- **Downward Tailoring Exceptions:** If a client requests dropping a standard control (e.g., bypassing code review to accelerate release), this constitutes a formal risk waiver governed by [`../01-engineering-governance/exceptions-and-escalation.md`](../../categories/01-development-and-engineering/01-engineering-governance/exceptions-and-escalation.md).

@@ -14,6 +14,12 @@ desktop.ini
 .env.*
 !.env.example
 
+# Dependencies & Virtual Environments
+node_modules/
+.venv/
+env/
+venv/
+
 # Temporary / scratch
 tmp/
 temp/

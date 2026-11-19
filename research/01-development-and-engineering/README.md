@@ -1,19 +1,25 @@
 ---
 title: "Research and Validation Overview"
-document_type: reference
+document_type: research-note
 category: "01-development-and-engineering"
 status: proposed
 owner: null
 last_reviewed: null
 related_documents:
   - "../README.md"
-  - "../../../research/README.md"
+  - "../../categories/01-development-and-engineering/README.md"
+  - "../README.md"
+  - "../../categories/01-development-and-engineering/README.md"
   - "./research-plan.md"
   - "./evidence-register.md"
   - "./candidate-practices.md"
   - "./applicability-matrix.md"
   - "./validation-log.md"
 ---
+
+> [!NOTE]
+> **Candidate Practice / Proposed Framework:** This document contains research and evaluation materials. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 
 # 00. Research and Validation
 
@@ -34,7 +40,7 @@ To ensure that engineering guidelines, workflows, and standards are grounded in 
 ## What Does Not Belong Here
 
 - **Approved Agency Policies:** Formally approved policies belong in `01-engineering-governance/` or organizational policy folders.
-- **Detailed Primary Source Notes:** Comprehensive external literature summaries belong in the central repository [`../../research/`](../../../research/README.md).
+- **Detailed Primary Source Notes:** Comprehensive external literature summaries belong in the central repository [`../../research/`](../README.md).
 - **Production Pilot Results:** Walkthroughs recorded here are synthetic desktop validations; real-world pilot evidence will be documented only when actual client engagements occur.
 
 ## Directory Navigation
@@ -49,9 +55,9 @@ To ensure that engineering guidelines, workflows, and standards are grounded in 
 
 ## Related Agency Categories
 
-- [`../../13-knowledge-systems-and-automation/README.md`](../../13-knowledge-systems-and-automation/README.md): Repository documentation standards and evidence lifecycle.
-- [`../../12-legal-security-and-risk-management/README.md`](../../12-legal-security-and-risk-management/README.md): Organizational security compliance and legal risk alignment.
-- [`../../03-business-strategy-and-governance/README.md`](../../03-business-strategy-and-governance/README.md): Strategic service offerings informing research priorities.
+- [`../../13-knowledge-systems-and-automation/README.md`](../../categories/13-knowledge-systems-and-automation/README.md): Repository documentation standards and evidence lifecycle.
+- [`../../12-legal-security-and-risk-management/README.md`](../../categories/12-legal-security-and-risk-management/README.md): Organizational security compliance and legal risk alignment.
+- [`../../03-business-strategy-and-governance/README.md`](../../categories/03-business-strategy-and-governance/README.md): Strategic service offerings informing research priorities.
 
 ## Open Questions
 

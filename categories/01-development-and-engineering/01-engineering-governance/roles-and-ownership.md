@@ -13,6 +13,10 @@ related_documents:
 
 # Engineering Roles and Ownership
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines proposed technical roles, areas of accountability, and ownership boundaries across the engineering lifecycle to ensure clear responsibility without rigid organizational silos.
 

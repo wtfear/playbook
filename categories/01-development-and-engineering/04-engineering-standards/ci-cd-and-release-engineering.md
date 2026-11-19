@@ -7,13 +7,17 @@ owner: null
 last_reviewed: null
 related_documents:
   - "./README.md"
-  - "../00-research-and-validation/evidence-register.md"
+  - "../../../research/01-development-and-engineering/evidence-register.md"
   - "./source-control-and-change-integration.md"
   - "./data-databases-and-test-data.md"
   - "../03-delivery-lifecycle/09-release-readiness-and-deployment.md"
 ---
 
 # Standard: CI/CD and Release Engineering
+
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 
 ## 1. Purpose
 Establishes proposed standards for automated continuous integration (CI), continuous delivery (CD), automated DevSecOps validation, immutable artifact generation, and zero-downtime deployment strategies.
@@ -85,4 +89,4 @@ An automated rollback must immediately trigger without requiring human intervent
 - [`./source-control-and-change-integration.md`](./source-control-and-change-integration.md): Git branching and commit rules.
 - [`./data-databases-and-test-data.md`](./data-databases-and-test-data.md): Expand-contract database migration pattern.
 - [`../03-delivery-lifecycle/09-release-readiness-and-deployment.md`](../03-delivery-lifecycle/09-release-readiness-and-deployment.md): Release readiness stage.
-- [`../00-research-and-validation/evidence-register.md`](../00-research-and-validation/evidence-register.md): DORA CD benchmarks.
+- [`../../../research/01-development-and-engineering/evidence-register.md`](../../../research/01-development-and-engineering/evidence-register.md): DORA CD benchmarks.

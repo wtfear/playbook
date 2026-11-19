@@ -1,11 +1,17 @@
-# Category 08: End-to-End Agency and Startup
-
-```yaml
+---
+title: "Category 08: End-to-End Agency and Startup"
+document_type: reference
 category: "08-end-to-end-agency-and-startup"
 status: proposed
+owner: null
 last_reviewed: null
-owner: null # unassigned
-```
+related_documents:
+  - "../../README.md"
+  - "../../structure-guide.md"
+  - "../README.md"
+---
+
+# Category 08: End-to-End Agency and Startup
 
 ## 1. Purpose
 Orchestrates macro, cross-functional operational journeys that traverse multiple functional categories. It maps complete end-to-end lifecycles—from agency inception to complete client engagements and crisis response—ensuring smooth cross-category handoffs and holistic alignment.

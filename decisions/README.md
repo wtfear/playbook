@@ -1,3 +1,16 @@
+---
+title: "Operating Decision Records (ODRs) Overview"
+document_type: reference
+category: "03-business-strategy-and-governance"
+status: proposed
+owner: null
+last_reviewed: null
+related_documents:
+  - "../README.md"
+  - "../structure-guide.md"
+  - "../templates/decision-record-template.md"
+---
+
 # Operating Decision Records (ODRs)
 
 This directory serves as the formal repository for all Operating and Architectural Decision Records of the agency.

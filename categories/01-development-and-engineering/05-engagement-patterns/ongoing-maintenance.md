@@ -15,6 +15,10 @@ related_documents:
 
 # Pattern: Ongoing Maintenance
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines proposed engineering workflows, operational rhythms, SLA tracking, and scope boundaries for delivering ongoing technical maintenance, support retainers, and preventative system care under contract.
 

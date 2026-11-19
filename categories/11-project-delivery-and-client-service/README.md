@@ -1,11 +1,17 @@
-# Category 11: Project Delivery and Client Service
-
-```yaml
+---
+title: "Category 11: Project Delivery and Client Service"
+document_type: reference
 category: "11-project-delivery-and-client-service"
 status: proposed
+owner: null
 last_reviewed: null
-owner: null # unassigned
-```
+related_documents:
+  - "../../README.md"
+  - "../../structure-guide.md"
+  - "../README.md"
+---
+
+# Category 11: Project Delivery and Client Service
 
 ## 1. Purpose
 Defines how the agency manages client commitments, guides client onboarding, plans and tracks milestones, communicates project progress, manages scope boundaries, coordinates user acceptance, and executes smooth project handovers and closures.

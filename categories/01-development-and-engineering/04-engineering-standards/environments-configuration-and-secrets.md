@@ -8,11 +8,15 @@ last_reviewed: null
 related_documents:
   - "./README.md"
   - "./security-and-privacy-engineering.md"
-  - "../00-research-and-validation/candidate-practices.md"
+  - "../../../research/01-development-and-engineering/candidate-practices.md"
   - "../../12-legal-security-and-risk-management/README.md"
 ---
 
 # Standard: Environments, Configuration, and Secrets
+
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 
 ## 1. Purpose
 Establishes proposed standards for strict separation of configuration from code, prevention of credential leakage, management of environment parity, and secure handling of sensitive API keys and secrets.
@@ -30,7 +34,7 @@ Establishes proposed standards for strict separation of configuration from code,
 Universal and non-negotiable across all repositories, contributors, and client deliverables.
 
 ## 4. Related Documents
-- [`../00-research-and-validation/candidate-practices.md`](../00-research-and-validation/candidate-practices.md): Candidate Practice CP-01 (Pre-Commit Secret Scanning).
+- [`../../../research/01-development-and-engineering/candidate-practices.md`](../../../research/01-development-and-engineering/candidate-practices.md): Candidate Practice CP-01 (Pre-Commit Secret Scanning).
 - [`./security-and-privacy-engineering.md`](./security-and-privacy-engineering.md): Broader application security standards.
 - [`../../12-legal-security-and-risk-management/README.md`](../../12-legal-security-and-risk-management/README.md): Organizational secrets policy.
 

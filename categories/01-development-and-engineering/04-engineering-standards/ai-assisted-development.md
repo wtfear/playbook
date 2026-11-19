@@ -15,6 +15,10 @@ related_documents:
 
 # Standard: AI-Assisted Development
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Establishes proposed guidelines, security guardrails, quality verification gates, and data protection practices for engineering contributors utilizing Artificial Intelligence (AI) coding assistants, code generation tools, and LLM-based developer environments.
 

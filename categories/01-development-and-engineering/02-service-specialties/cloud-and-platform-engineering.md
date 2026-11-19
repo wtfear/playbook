@@ -10,54 +10,72 @@ related_documents:
   - "../03-delivery-lifecycle/README.md"
   - "../04-engineering-standards/ci-cd-and-release-engineering.md"
   - "../04-engineering-standards/environments-configuration-and-secrets.md"
-  - "../04-engineering-standards/security-and-privacy-engineering.md"
+  - "../../10-finance-and-money-management/README.md"
+  - "../../12-legal-security-and-risk-management/README.md"
 ---
 
 # Specialty: Cloud and Platform Engineering
 
-```yaml
-specialty: cloud-and-platform-engineering
-activation_status: unconfirmed
-prescribed_stack: none # Intentionally unconfirmed
-```
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
 
-## 1. Purpose
-Explores the candidate technical requirements, infrastructure-as-code practices, cloud security postures, and environment management architectures for delivering scalable cloud infrastructure and internal developer platforms.
+---
 
-## 2. Proposed Scope
-- Cloud infrastructure architecture (AWS, Google Cloud, Azure, Hetzner, modern PaaS).
-- Infrastructure as Code (IaC) tooling (e.g., Terraform, OpenTofu, Pulumi, AWS CDK).
-- Containerization and orchestration (Docker, Docker Compose, Kubernetes, ECS, Nomad).
-- Serverless architecture (Cloud Run, AWS Lambda, edge functions).
-- Networking, DNS, TLS/SSL certificates, CDN routing, and Web Application Firewalls (WAF).
-- Cloud security posture management (least-privilege IAM, security groups, VPC isolation).
-- Cloud billing management, cost monitoring, budget alerts, and resource tagging.
-- Automated provisioning of isolated ephemeral preview, staging, and production environments.
+## 1. When it applies
+Applies to engagements requiring custom cloud infrastructure provisioning, container orchestration, Infrastructure as Code (IaC), virtual networking (VPCs), serverless platforms, and cloud landing zones (AWS, GCP, Azure, DigitalOcean). *(Specialty status: proposed & unconfirmed).*
 
-## 3. Applicability
-Relevant when provisioning, migrating, securing, or managing cloud environments. (Activation status: **unconfirmed**).
+---
 
-## 4. Related Documents
-- Shared Lifecycle: [`../03-delivery-lifecycle/README.md`](../03-delivery-lifecycle/README.md).
-- Engineering Standards:
-  - [`../04-engineering-standards/ci-cd-and-release-engineering.md`](../04-engineering-standards/ci-cd-and-release-engineering.md): Deployment pipeline automation.
-  - [`../04-engineering-standards/environments-configuration-and-secrets.md`](../04-engineering-standards/environments-configuration-and-secrets.md): Cloud secrets and configuration.
-  - [`../04-engineering-standards/security-and-privacy-engineering.md`](../04-engineering-standards/security-and-privacy-engineering.md): Cloud network security and IAM.
+## 2. Must (Mandatory Minimum)
+> *Status: [TBD / Pending Approval]*
+>
+> *(Proposed mandatory baseline requirements subject to founder approval).*
 
-## 5. Specialty-Specific Research Questions
-- What default cloud deployment model (managed PaaS like Vercel/Fly.io vs. hyperscaler container platforms like AWS ECS / GCP Cloud Run) best minimizes agency operational overhead?
-- How should cloud accounts be structured between the agency and the client (client-owned billing account vs. agency-managed pass-through)?
-- What IaC framework provides the most maintainable codebase for non-specialist client engineers post-handover?
+- **Declarative Infrastructure as Code (IaC):** All production and staging cloud resources must be provisioned and managed declaratively via version-controlled IaC (e.g., Terraform, OpenTofu, AWS CDK, Pulumi). Manual click-ops in web consoles is strictly prohibited for production environments.
+- **Least-Privilege Identity & Access Management (IAM):** Service accounts, container task roles, and developer access must adhere to strict least-privilege permissions. Wildcard permissions (`"Action": "*"`) are forbidden.
+- **Client Billing Ownership & Direct Custody:** Cloud accounts and root billing credentials must remain under the client's direct ownership. The agency operates using delegated federated IAM roles or SSO invitations.
+- **Automated Cloud Cost Controls & Budgets:** Every provisioned environment must enforce automated billing alerts (e.g., AWS Budgets, GCP Budget Alerts) at 50%, 80%, and 100% of the agreed monthly run-rate.
 
-## 6. Known Unknowns
-- Client internal capability to maintain Kubernetes clusters or complex Terraform modules after project exit.
-- Commercial liability for cloud infrastructure security breaches post-handover.
-- Cloud cost variability and spike protection policies.
+---
 
-## 7. Candidate Evidence and Artifacts
-- Infrastructure as Code (IaC) Baseline Terraform / OpenTofu Modules.
-- Cloud Account IAM Least-Privilege Baseline Architecture.
-- Cloud Infrastructure Transfer & Billing Migration Checklist.
+## 3. Should (Recommended Practice & Judgment Guidance)
+- **Environment Isolation:** Maintain strictly segregated cloud accounts or projects for `development`, `staging`, and `production` to prevent staging mistakes from impacting live users.
+- **Multi-Tenant Tooling Isolation:** Agency internal platform tools must keep client environments strictly isolated using separate cloud projects, IAM boundaries, and state files.
+- **State File Security:** Remote IaC state files (e.g., Terraform S3/GCS backends) must be encrypted at rest, versioned, and protected by state-locking (DynamoDB/object lock).
+- **Small-Team Practicality:** Favor managed PaaS or modern serverless platforms (e.g., AWS App Runner, Cloud Run, Vercel, Supabase) for early-stage clients rather than operating self-managed Kubernetes clusters.
 
-## 8. Next Action
-Formulate architectural recommendation on client-owned vs. agency-managed cloud account ownership models.
+---
+
+## 4. Common Failure Modes
+- **Orphaned Zombie Cloud Resources:** Provisioning unattached elastic IPs, orphaned EBS volumes, or idle GPU instances that silently accumulate thousands of dollars in monthly cloud invoices.
+- **State Drift from Console Tweaks:** Modifying a production database setting manually in the cloud console, which gets silently overwritten or torn down on the next Terraform apply.
+- **Over-Privileged Root Access:** Using account root credentials or overly permissive IAM admin policies for daily CI/CD runners, creating a critical vulnerability vector.
+- **Missing Resource Tagging:** Deploying resources without owner/project tags, making it impossible to audit which client or environment incurred specific cloud charges.
+
+---
+
+## 5. Evidence that it's done (Checklist)
+- [ ] 100% of production infrastructure codified in version-controlled IaC modules.
+- [ ] Automated Terraform/IaC plan checks executed and verified in CI on pull requests.
+- [ ] IAM roles audited to confirm least-privilege access with zero wildcard admin rights.
+- [ ] Cloud billing alerts verified and configured to email project leads and client owners.
+- [ ] Remote state backend configured with server-side encryption and state locking.
+
+---
+
+## 6. Template
+- [`../../../templates/engineering-topic-template.md`](../../../templates/engineering-topic-template.md): Standard Topic Template.
+- [`../../../templates/foundation-document-template.md`](../../../templates/foundation-document-template.md): Section 0.7 Architecture & Cloud Components.
+
+---
+
+## 7. Handoffs & Cross-Category Boundaries
+- **Finance ([`../../10-finance-and-money-management/README.md`](../../10-finance-and-money-management/README.md)):** Reviews cloud infrastructure estimates, monitors run-rates, and ensures agency cards are not billed for client workloads.
+- **Legal, Security & Risk ([`../../12-legal-security-and-risk-management/README.md`](../../12-legal-security-and-risk-management/README.md)):** Verifies cloud data residency compliance (GDPR/DPDP) and customer encryption key ownership.
+- **Sales ([`../../05-sales/README.md`](../../05-sales/README.md)):** Communicates projected monthly cloud hosting costs to the client during proposal delivery.
+
+---
+
+## 8. Open Decisions
+- Should the agency standardize on Terraform/OpenTofu vs. AWS CDK / SST as the default IaC toolchain?
+- What is our default recommended managed platform (e.g., AWS ECS/Fargate vs. GCP Cloud Run) for small-to-medium client backend deployments?

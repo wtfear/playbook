@@ -9,53 +9,72 @@ related_documents:
   - "./README.md"
   - "../03-delivery-lifecycle/README.md"
   - "../04-engineering-standards/ux-ui-and-accessibility.md"
-  - "../04-engineering-standards/security-and-privacy-engineering.md"
-  - "../04-engineering-standards/ci-cd-and-release-engineering.md"
+  - "../04-engineering-standards/performance-and-capacity.md"
+  - "../../12-legal-security-and-risk-management/README.md"
 ---
 
 # Specialty: Web Applications and Websites
 
-```yaml
-specialty: web-applications-and-websites
-activation_status: unconfirmed
-prescribed_stack: none # Intentionally unconfirmed
-```
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
 
-## 1. Purpose
-Explores the candidate technical requirements, constraints, and architecture considerations for delivering responsive web applications, single-page applications (SPAs), server-rendered portals, and high-performance marketing websites.
+---
 
-## 2. Proposed Scope
-- Client-facing web applications, administrative portals, and SaaS dashboards.
-- Content-managed marketing websites, headless CMS integrations, and landing pages.
-- Client-side rendering (CSR), server-side rendering (SSR), and static site generation (SSG) patterns.
-- Responsive layout design across modern mobile, tablet, and desktop viewports.
-- Web accessibility conformance (WCAG 2.2 Level AA).
-- Search engine optimization (SEO) technical baselines and Core Web Vitals optimization.
+## 1. When it applies
+Applies to commercial websites, headless CMS implementations, client dashboards, consumer portals, and web application frontends. *(Specialty status: proposed & unconfirmed).*
 
-## 3. Applicability
-Relevant when scoping, designing, or implementing web-based user interfaces. (Activation status: **unconfirmed**).
+---
 
-## 4. Related Documents
-- Shared Lifecycle: [`../03-delivery-lifecycle/README.md`](../03-delivery-lifecycle/README.md).
-- Engineering Standards:
-  - [`../04-engineering-standards/ux-ui-and-accessibility.md`](../04-engineering-standards/ux-ui-and-accessibility.md): Accessibility and UI standards.
-  - [`../04-engineering-standards/security-and-privacy-engineering.md`](../04-engineering-standards/security-and-privacy-engineering.md): Web security (XSS, CSRF, CSP headers).
-  - [`../04-engineering-standards/ci-cd-and-release-engineering.md`](../04-engineering-standards/ci-cd-and-release-engineering.md): Front-end build and hosting pipelines.
+## 2. Must (Mandatory Minimum)
+> *Status: [TBD / Pending Approval]*
+>
+> *(Proposed mandatory baseline requirements subject to founder approval).*
 
-## 5. Specialty-Specific Research Questions
-- What default architectural patterns (e.g., SSR frameworks vs. static Jamstack with API backends) provide the best balance of developer velocity and client maintainability?
-- How should headless CMS options (e.g., Sanity, Strapi, Contentful) be evaluated against client non-technical editor requirements?
-- What automated testing frameworks (e.g., Playwright, Cypress) provide reliable E2E coverage without high maintenance overhead?
+- **Browser Support Baseline:** All web deliverables must verify functional compatibility across the last two major versions of evergreen browsers: Chrome, Safari (macOS & iOS), Edge, and Firefox.
+- **Cookies & Consent Compliance:** Web applications deploying analytics, advertising pixels, or marketing trackers must integrate compliant cookie consent banners that honor user consent choices prior to script execution (satisfying GDPR and ePrivacy directives).
+- **Page Speed & Core Web Vitals:** Production pages must achieve Google Core Web Vitals pass thresholds (LCP < 2.5s, INP < 200ms, CLS < 0.1) on standard 4G mobile emulation.
+- **Baseline Technical SEO:** Public web properties must implement clean semantic HTML, dynamic OpenGraph/Twitter social cards, valid canonical URLs, auto-generated XML sitemaps, and strict `robots.txt` directives.
 
-## 6. Known Unknowns
-- Baseline client budget expectations for web application projects.
-- Standard client expectations regarding legacy browser support (e.g., older Safari versions).
-- Long-term hosting and domain management ownership models post-handover.
+---
 
-## 7. Candidate Evidence and Artifacts
-- Web Application Architecture Checklist.
-- Automated Core Web Vitals and Lighthouse CI audit configurations.
-- WCAG 2.2 AA accessibility verification report template.
+## 3. Should (Recommended Practice & Judgment Guidance)
+- **Responsive Design & Mobile-First:** Build layout breakpoints with mobile-first CSS media queries, testing UI states on minimum 320px screen widths up to 4K displays.
+- **Progressive Hydration & SSR/SSG:** Leverage Server-Side Rendering (SSR) or Static Site Generation (SSG) for public SEO-critical routes, reserving client-side hydration for authenticated application areas.
+- **Accessibility Integration:** Target WCAG 2.2 Level AA compliance, ensuring proper focus states, keyboard navigation, and ARIA labels ([`../04-engineering-standards/ux-ui-and-accessibility.md`](../04-engineering-standards/ux-ui-and-accessibility.md)).
+- **Small-Team Simplicity:** Favor mature modern web frameworks (e.g., Next.js, Astro) with integrated routing, asset optimization, and edge deployment capabilities over disparate build tooling.
 
-## 8. Next Action
-Conduct trade-off research on primary modern web application architectures and headless CMS pairings.
+---
+
+## 4. Common Failure Modes
+- **Layout Shifts & Janky Page Loads:** Unsized images and late-loading fonts causing high Cumulative Layout Shift (CLS), penalizing search rank and frustrating users.
+- **Safari / iOS Rendering Quirks:** Testing only on desktop Chrome, leading to broken mobile Safari layouts (e.g., 100vh viewport bugs, date input inconsistencies).
+- **Non-Compliant Tracker Execution:** Executing Meta/Google pixels before user cookie consent is granted, creating severe legal liability under EU/UK privacy regulations.
+- **Broken Social Cards & Previews:** Neglecting OpenGraph tags, resulting in empty or broken link previews when shared on LinkedIn, Twitter, or Slack.
+
+---
+
+## 5. Evidence that it's done (Checklist)
+- [ ] Cross-browser testing log confirms rendering across Chrome, Safari (iOS/macOS), Edge, and Firefox.
+- [ ] Google Lighthouse audit confirms Core Web Vitals pass performance budgets.
+- [ ] Cookie consent banner operational, blocking non-essential cookies until accepted.
+- [ ] XML sitemap and `robots.txt` verified via Google Search Console or crawler simulator.
+- [ ] OpenGraph image and social preview tags validated using card inspection tools.
+
+---
+
+## 6. Template
+- [`../../../templates/engineering-topic-template.md`](../../../templates/engineering-topic-template.md): Standard Topic Template.
+- [`../../../templates/checklist-template.md`](../../../templates/checklist-template.md): Web Launch Checklist.
+
+---
+
+## 7. Handoffs & Cross-Category Boundaries
+- **Marketing ([`../../06-marketing/README.md`](../../06-marketing/README.md)):** Coordinates tracking pixels, SEO keyword structures, and social meta content requirements.
+- **Legal, Security & Risk ([`../../12-legal-security-and-risk-management/README.md`](../../12-legal-security-and-risk-management/README.md)):** Reviews cookie policy text, privacy policy links, and regulatory consent mechanics.
+- **Project Delivery ([`../../11-project-delivery-and-client-service/README.md`](../../11-project-delivery-and-client-service/README.md)):** Obtains client approval on design fidelity and browser compatibility matrix.
+
+---
+
+## 8. Open Decisions
+- What default framework should be standard for marketing sites (e.g., Astro vs. Webflow vs. Next.js)?
+- What default cookie consent management platform (e.g., CookieYes vs. custom lightweight banner) should be deployed for client sites?

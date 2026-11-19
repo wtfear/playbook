@@ -14,6 +14,10 @@ related_documents:
 
 # Lifecycle 03: Existing System Assessment
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines the proposed methodology for inspecting, auditing, and baselining legacy or client-provided codebases, infrastructure, and third-party dependencies before assuming operational responsibility or building new features.
 

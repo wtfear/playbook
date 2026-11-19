@@ -1,3 +1,19 @@
+---
+title: "Research: Production Lifecycle - Phase 4: Operate"
+document_type: research-note
+category: "01-development-and-engineering"
+status: proposed
+owner: null
+last_reviewed: null
+related_documents:
+  - "./README.md"
+  - "../../categories/01-development-and-engineering/03-delivery-lifecycle/11-operation-maintenance-and-technical-closure.md"
+  - "../../categories/01-development-and-engineering/04-engineering-standards/backup-recovery-and-incident-engineering.md"
+---
+
+> [!NOTE]
+> **Candidate Practice / Proposed Framework:** This document contains external research and candidate reference material. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 # Phase 4: Operate — A Generalized Guide
 
 ## What Phase 4 actually is

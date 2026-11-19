@@ -13,6 +13,10 @@ related_documents:
 
 # Technical Exceptions and Escalation
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines proposed procedures for requesting, evaluating, and documenting exceptions to engineering standards, and the escalation paths for critical technical blockers, security risks, or delivery failures.
 

@@ -1,11 +1,17 @@
-# Category 10: Finance and Money Management
-
-```yaml
+---
+title: "Category 10: Finance and Money Management"
+document_type: reference
 category: "10-finance-and-money-management"
 status: proposed
+owner: null
 last_reviewed: null
-owner: null # unassigned
-```
+related_documents:
+  - "../../README.md"
+  - "../../structure-guide.md"
+  - "../README.md"
+---
+
+# Category 10: Finance and Money Management
 
 ## 1. Purpose
 Defines the financial governance, cash planning, expense controls, invoicing, payment tracking, profitability analysis, and reserve policies that safeguard the agency's solvency, liquidity, and fiscal health.

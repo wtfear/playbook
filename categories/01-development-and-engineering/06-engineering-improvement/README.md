@@ -15,6 +15,10 @@ related_documents:
 
 # 06. Engineering Improvement
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 This directory defines the proposed frameworks, metrics, learning loops, and continuous improvement mechanisms for Development and Engineering.
 
 ## Purpose
@@ -37,6 +41,7 @@ flowchart LR
 | :--- | :--- | :--- |
 | [`delivery-and-quality-measures.md`](./delivery-and-quality-measures.md) | Delivery performance metrics, lead times, defect escape rates | DORA Core Metrics |
 | [`technical-debt-management.md`](./technical-debt-management.md) | Debt taxonomy, risk ranking, repayment budgets, tracking | Martin Fowler: Technical Debt |
+| [`reuse-and-starter-templates.md`](./reuse-and-starter-templates.md) | Starter repositories, boilerplate curation, IP isolation | Internal Asset Reuse |
 | [`retrospective-and-root-cause-learning.md`](./retrospective-and-root-cause-learning.md) | Milestone retrospectives, 5-Whys, blameless post-mortems | Google SRE Incident Management |
 | [`improvement-backlog.md`](./improvement-backlog.md) | Prioritized backlog of internal developer tool and process enhancements | Continuous Improvement (Kaizen) |
 

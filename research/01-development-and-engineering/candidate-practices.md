@@ -1,6 +1,6 @@
 ---
 title: "Candidate Engineering Practices"
-document_type: reference
+document_type: research-note
 category: "01-development-and-engineering"
 status: proposed
 owner: null
@@ -9,8 +9,12 @@ related_documents:
   - "./README.md"
   - "./evidence-register.md"
   - "./applicability-matrix.md"
-  - "../01-engineering-governance/engineering-decisions.md"
+  - "../../categories/01-development-and-engineering/01-engineering-governance/engineering-decisions.md"
 ---
+
+> [!NOTE]
+> **Candidate Practice / Proposed Framework:** This document contains research and evaluation materials. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 
 # Candidate Engineering Practices
 
@@ -60,7 +64,7 @@ This document analyzes candidate technical practices under evaluation for agency
 - **Applicability:** All iterative client development projects.
 - **Expected Benefit:** Clear requirements, verifiable acceptance criteria, and reduced mid-sprint blockers.
 - **Cost and Complexity:** Low technical cost; requires discipline during discovery and client backlog grooming.
-- **Dependencies:** Collaboration with [`../../11-project-delivery-and-client-service/`](../../11-project-delivery-and-client-service/README.md).
+- **Dependencies:** Collaboration with [`../../11-project-delivery-and-client-service/`](../../categories/11-project-delivery-and-client-service/README.md).
 - **Proposed Owner:** Project Delivery Lead / Tech Lead (unassigned).
 - **Minimum Useful Implementation:** A 5-point checklist verifying: business objective defined, user journey mapped, mockups available, acceptance criteria written, dependencies unblocked.
 - **Exceptions:** Early exploratory discovery spikes or proof-of-concept sprints.
@@ -92,7 +96,7 @@ This document analyzes candidate technical practices under evaluation for agency
 - **Applicability:** All developers using AI assistants (Copilot, Claude, ChatGPT, etc.).
 - **Expected Benefit:** Accelerates boilerplate authoring while preventing security regressions and license contamination.
 - **Cost and Complexity:** Low technical cost; requires clear human-review policies and prompt hygiene.
-- **Dependencies:** [`../../12-legal-security-and-risk-management/`](../../12-legal-security-and-risk-management/README.md) and [`../../13-knowledge-systems-and-automation/`](../../13-knowledge-systems-and-automation/README.md).
+- **Dependencies:** [`../../12-legal-security-and-risk-management/`](../../categories/12-legal-security-and-risk-management/README.md) and [`../../13-knowledge-systems-and-automation/`](../../categories/13-knowledge-systems-and-automation/README.md).
 - **Proposed Owner:** Principal Engineer (unassigned).
 - **Minimum Useful Implementation:** Policy mandating human line-by-line review, banning submission of client credentials or proprietary logic to public models, and requiring automated unit tests for all AI-generated logic.
 - **Exceptions:** None for production code.

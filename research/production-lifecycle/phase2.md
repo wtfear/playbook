@@ -1,3 +1,19 @@
+---
+title: "Research: Production Lifecycle - Phase 2: Build & Test"
+document_type: research-note
+category: "01-development-and-engineering"
+status: proposed
+owner: null
+last_reviewed: null
+related_documents:
+  - "./README.md"
+  - "../../categories/01-development-and-engineering/04-engineering-standards/ci-cd-and-release-engineering.md"
+  - "../../categories/01-development-and-engineering/04-engineering-standards/testing-and-quality-engineering.md"
+---
+
+> [!NOTE]
+> **Candidate Practice / Proposed Framework:** This document contains external research and candidate reference material. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 # Phase 2: Build & Test — A Generalized Guide
 
 ## What Phase 2 actually is

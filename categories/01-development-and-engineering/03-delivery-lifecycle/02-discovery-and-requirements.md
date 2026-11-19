@@ -14,6 +14,10 @@ related_documents:
 
 # Lifecycle 02: Discovery and Requirements Analysis
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines the proposed methodology for eliciting, structuring, validating, and tracing functional and non-functional technical requirements, establishing clear acceptance criteria, and assessing the technical impact of scope changes.
 

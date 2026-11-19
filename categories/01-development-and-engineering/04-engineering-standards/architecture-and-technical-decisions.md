@@ -13,6 +13,10 @@ related_documents:
 
 # Standard: Architecture and Technical Decisions
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Establishes proposed standards for system design, modularity, boundary separation, trade-off evaluation, and documentation of technical choices using Architecture Decision Records (ADRs).
 

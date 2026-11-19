@@ -9,12 +9,16 @@ related_documents:
   - "./README.md"
   - "./02-discovery-and-requirements.md"
   - "./05-feasibility-estimation-and-planning.md"
-  - "./foundation-document-template.md"
+  - "../../../templates/foundation-document-template.md"
   - "../04-engineering-standards/architecture-and-technical-decisions.md"
   - "../04-engineering-standards/ux-ui-and-accessibility.md"
 ---
 
 # Lifecycle 04: Experience and Solution Design
+
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 
 ## 1. Purpose
 Defines the proposed process for translating validated requirements into cohesive user experience specifications, technical system architectures, data models, integration contracts, and security boundaries before implementation begins.
@@ -44,7 +48,7 @@ Applies to all new builds, major feature additions, and system re-architectures.
 - What lightweight threat modeling method (e.g., STRIDE-lite) is practical for startup projects?
 
 ## 6. Candidate Evidence and Artifacts
-- Technical Foundation Contract ([`./foundation-document-template.md`](./foundation-document-template.md)).
+- Technical Foundation Contract ([`../../../templates/foundation-document-template.md`](../../../templates/foundation-document-template.md)).
 - Solution Architecture Document (SAD) with C4 model diagrams.
 - Entity-Relationship Diagram (ERD) and Data Dictionary.
 - API Schema Contracts (OpenAPI specifications).

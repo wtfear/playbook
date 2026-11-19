@@ -1,11 +1,17 @@
-# Category 06: Marketing
-
-```yaml
+---
+title: "Category 06: Marketing"
+document_type: reference
 category: "06-marketing"
 status: proposed
+owner: null
 last_reviewed: null
-owner: null # unassigned
-```
+related_documents:
+  - "../../README.md"
+  - "../../structure-guide.md"
+  - "../README.md"
+---
+
+# Category 06: Marketing
 
 ## 1. Purpose
 Defines how the agency builds brand reputation, public visibility, authority, and inbound credibility through content marketing, case studies, social media, portfolio assets, and digital presence.

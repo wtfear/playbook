@@ -15,6 +15,10 @@ related_documents:
 
 # Lifecycle 06: Project Engineering Setup
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines the proposed setup sequence for establishing developer environments, initializing source control repositories, configuring secrets managers, setting up branch protection rules, and provisioning staging infrastructure before writing project code.
 

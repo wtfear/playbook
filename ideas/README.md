@@ -1,3 +1,16 @@
+---
+title: "Strategic Ideas and Review Records Overview"
+document_type: reference
+category: "03-business-strategy-and-governance"
+status: proposed
+owner: null
+last_reviewed: null
+related_documents:
+  - "../README.md"
+  - "../structure-guide.md"
+  - "../open-questions.md"
+---
+
 # Strategic Ideas and Review Records
 
 This directory captures nascent strategic concepts, experimental service proposals, market hunches, and quarterly idea review logs before they enter formal research or operational drafting.

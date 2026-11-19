@@ -1,11 +1,17 @@
-# Category 07: Personal and Professional Growth
-
-```yaml
+---
+title: "Category 07: Personal and Professional Growth"
+document_type: reference
 category: "07-personal-and-professional-growth"
 status: proposed
+owner: null
 last_reviewed: null
-owner: null # unassigned
-```
+related_documents:
+  - "../../README.md"
+  - "../../structure-guide.md"
+  - "../README.md"
+---
+
+# Category 07: Personal and Professional Growth
 
 ## 1. Purpose
 Defines how individuals within the agency—founders, leaders, and contributors—intentionally build capability, professional judgment, technical craft, communication clarity, leadership capacity, and resilience through deliberate practice, scenario role-play, and self-reflection.

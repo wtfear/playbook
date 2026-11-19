@@ -1,11 +1,17 @@
-# Category 05: Sales
-
-```yaml
+---
+title: "Category 05: Sales"
+document_type: reference
 category: "05-sales"
 status: proposed
+owner: null
 last_reviewed: null
-owner: null # unassigned
-```
+related_documents:
+  - "../../README.md"
+  - "../../structure-guide.md"
+  - "../README.md"
+---
+
+# Category 05: Sales
 
 ## 1. Purpose
 Defines how the agency qualifies commercial opportunities, conducts in-depth client discovery, prepares accurate project estimates and proposals, negotiates terms, overcomes objections, closes signed contracts, and seamlessly hands over new accounts to the delivery team.

@@ -14,6 +14,10 @@ related_documents:
 
 # Pattern: Existing Project Takeovers
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines proposed engineering practices, triage protocols, and liability boundaries for taking over existing, inherited, or partially completed codebases from client internal teams or previous external agencies.
 

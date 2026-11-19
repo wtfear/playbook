@@ -7,12 +7,16 @@ owner: null
 last_reviewed: null
 related_documents:
   - "./README.md"
-  - "../00-research-and-validation/evidence-register.md"
+  - "../../../research/01-development-and-engineering/evidence-register.md"
   - "./security-and-privacy-engineering.md"
   - "../../12-legal-security-and-risk-management/README.md"
 ---
 
 # Standard: Dependencies and Software Supply Chain
+
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 
 ## 1. Purpose
 Establishes proposed standards for managing third-party libraries, locking dependencies, scanning for known vulnerabilities, vetting open-source licenses, and mitigating software supply chain risks.
@@ -29,7 +33,7 @@ Establishes proposed standards for managing third-party libraries, locking depen
 Applies to all codebases importing external libraries, container images, or third-party SDKs.
 
 ## 4. Related Documents
-- [`../00-research-and-validation/evidence-register.md`](../00-research-and-validation/evidence-register.md): NIST SSDF (PW.4) supply chain evidence.
+- [`../../../research/01-development-and-engineering/evidence-register.md`](../../../research/01-development-and-engineering/evidence-register.md): NIST SSDF (PW.4) supply chain evidence.
 - [`./security-and-privacy-engineering.md`](./security-and-privacy-engineering.md): Threat modeling and vulnerability response.
 - [`../../12-legal-security-and-risk-management/README.md`](../../12-legal-security-and-risk-management/README.md): Legal licensing boundaries.
 

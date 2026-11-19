@@ -10,51 +10,70 @@ related_documents:
   - "../03-delivery-lifecycle/README.md"
   - "../04-engineering-standards/ci-cd-and-release-engineering.md"
   - "../04-engineering-standards/security-and-privacy-engineering.md"
+  - "../../05-sales/README.md"
 ---
 
 # Specialty: Desktop Applications
 
-```yaml
-specialty: desktop-applications
-activation_status: unconfirmed
-prescribed_stack: none # Intentionally unconfirmed
-```
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
 
-## 1. Purpose
-Explores the candidate technical requirements, cross-platform packaging, operating system integration constraints, and release engineering practices for delivering desktop applications across macOS, Windows, and Linux.
+---
 
-## 2. Proposed Scope
-- Cross-platform desktop application frameworks (e.g., Tauri, Electron, Flutter Desktop).
-- Operating system level integrations: file system access, local databases (SQLite), hardware peripherals, background tray processes.
-- Desktop application packaging, bundling, and distribution (DMG, MSI/EXE, AppImage/DEB).
-- Operating system code signing, certificate management, notarization (Apple Notarization, Windows SmartScreen).
-- Secure auto-update mechanisms and differential patching.
-- Local sandbox security, permissions, and inter-process communication (IPC) validation.
+## 1. When it applies
+Applies to client projects requiring cross-platform or native desktop software (Windows, macOS, Linux) built using frameworks such as Tauri, Electron, or Flutter Desktop. Activated only upon explicit commercial demand. *(Specialty status: proposed & unconfirmed).*
 
-## 3. Applicability
-Relevant when scoping, designing, or implementing native or cross-platform desktop software. (Activation status: **unconfirmed**).
+---
 
-## 4. Related Documents
-- Shared Lifecycle: [`../03-delivery-lifecycle/README.md`](../03-delivery-lifecycle/README.md).
-- Engineering Standards:
-  - [`../04-engineering-standards/ci-cd-and-release-engineering.md`](../04-engineering-standards/ci-cd-and-release-engineering.md): Desktop cross-compilation and automated release packaging.
-  - [`../04-engineering-standards/security-and-privacy-engineering.md`](../04-engineering-standards/security-and-privacy-engineering.md): OS permission boundaries and secure IPC.
-  - [`../04-engineering-standards/environments-configuration-and-secrets.md`](../04-engineering-standards/environments-configuration-and-secrets.md): Code signing certificate security.
+## 2. Must (Mandatory Minimum)
+> *Status: [TBD / Pending Approval]*
+>
+> *(Proposed mandatory baseline requirements subject to founder approval).*
 
-## 5. Specialty-Specific Research Questions
-- Does Tauri provide sufficient ecosystem maturity and plugin support to serve as our primary desktop recommendation over Electron?
-- What are the ongoing costs and operational complexities of maintaining Windows EV Code Signing certificates and Apple Developer accounts for client desktop software?
-- How are auto-update servers and binary distribution endpoints best architected to minimize bandwidth costs?
+- **Cryptographic Code Signing & Notarization:** All production binaries must be cryptographically signed using valid commercial certificates (Apple Developer ID for macOS notarization; Microsoft EV / Azure Trusted Signing certificate for Windows SmartScreen trust) to prevent operating system security blocks and scary warnings.
+- **Secure Packaging & Installers:** Build deterministic platform installers (`.dmg` / `.pkg` for macOS, `.msi` / NSIS `.exe` for Windows, `.deb` / `.AppImage` for Linux) generated exclusively in clean automated CI runners.
+- **Hardened Auto-Update Mechanism:** Desktop update pipelines (e.g., Tauri updater, electron-updater) must enforce HTTPS and verify cryptographic signature digests for every downloaded release manifest before applying updates.
 
-## 6. Known Unknowns
-- Commercial market demand for desktop-specific solutions compared to responsive web portals.
-- Client technical capability to maintain desktop code signing and notarization workflows post-handover.
-- Testing complexity across multiple OS versions and hardware variations.
+---
 
-## 7. Candidate Evidence and Artifacts
-- Cross-Platform Desktop Packaging & CI Build Matrix.
-- Apple Notarization & Windows Code Signing Verification Runbook.
-- Desktop Secure Auto-Update & Rollback Protocol.
+## 3. Should (Recommended Practice & Judgment Guidance)
+- **Tauri over Electron for Lightweight Utility:** Default to Tauri (Rust + Webview) for smaller binary footprints, reduced memory consumption, and tighter OS security, reserving Electron for apps requiring deep Chromium legacy engine parity.
+- **Client Ownership of Signing Certificates:** Code signing certificates (especially expensive Windows EV and Apple Developer accounts) must be purchased and registered under the client organization's legal name.
+- **Crash Reporting & Telemetry:** Integrate privacy-respecting native crash reporting (e.g., Sentry Native) to capture unhandled segfaults and operating system thread panics without collecting sensitive client documents.
+- **Small-Team Practicality:** Avoid custom native C++ GUI code; leverage web-technology desktop wrappers to reuse frontend component libraries across web and desktop deliverables.
 
-## 8. Next Action
-Conduct comparative performance and binary footprint evaluation between Tauri and Electron.
+---
+
+## 4. Common Failure Modes
+- **SmartScreen / Gatekeeper Blockades:** Distributing unsigned binaries that trigger Windows Defender SmartScreen blocks or macOS Gatekeeper quarantines, destroying user adoption.
+- **Broken Auto-Update Traps:** Pushing a corrupted update or mismatched manifest that leaves user installations permanently broken without a manual website re-download.
+- **Leaked Code Signing Certificates:** Committing private signing keys or password-unprotected `.p12` certificates into version control.
+- **Resource Hogging:** Building an Electron app that consumes 1.5 GB of RAM for simple text processing, prompting client complaints about performance.
+
+---
+
+## 5. Evidence that it's done (Checklist)
+- [ ] Code signing certificates verified and stored securely in CI secrets vault.
+- [ ] Automated CI workflow builds and signs macOS, Windows, and Linux installers.
+- [ ] macOS build passes Apple `xcrun notarytool` notarization and stapling.
+- [ ] In-app auto-update flow verified end-to-end in staging test sandbox.
+- [ ] Native crash reporter active and verified with simulated fault test.
+
+---
+
+## 6. Template
+- [`../../../templates/engineering-topic-template.md`](../../../templates/engineering-topic-template.md): Standard Topic Template.
+- [`../../../templates/foundation-document-template.md`](../../../templates/foundation-document-template.md): Section 0.7 Architecture & Binary Distribution.
+
+---
+
+## 7. Handoffs & Cross-Category Boundaries
+- **Sales ([`../../05-sales/README.md`](../../05-sales/README.md)):** Scoping must budget upfront costs for commercial code signing certificates (\$300–\$500/year for Windows EV certificates) into project commercial estimates.
+- **Legal, Security & Risk ([`../../12-legal-security-and-risk-management/README.md`](../../12-legal-security-and-risk-management/README.md)):** Verifies client corporate legal entity verification required by certificate authorities (DigiCert, Sectigo).
+- **Project Delivery ([`../../11-project-delivery-and-client-service/README.md`](../../11-project-delivery-and-client-service/README.md)):** Coordinates multi-platform beta testing across client operating systems.
+
+---
+
+## 8. Open Decisions
+- Should Tauri be designated as the agency's primary recommended desktop framework over Electron?
+- What cloud signing service (e.g., Azure Trusted Signing vs. AWS CloudHSM) provides the most cost-effective solution for Windows code signing?

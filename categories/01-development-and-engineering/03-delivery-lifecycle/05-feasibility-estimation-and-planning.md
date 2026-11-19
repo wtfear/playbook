@@ -15,6 +15,10 @@ related_documents:
 
 # Lifecycle 05: Feasibility, Estimation, and Planning
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines the proposed methodology for decomposing architectural designs into granular technical work breakdowns, generating realistic engineering estimates, calculating infrastructure cost models, and establishing technical milestone plans.
 

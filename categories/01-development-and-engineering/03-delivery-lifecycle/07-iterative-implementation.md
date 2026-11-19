@@ -15,6 +15,10 @@ related_documents:
 
 # Lifecycle 07: Iterative Implementation
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 ## 1. Purpose
 Defines the proposed engineering execution practices during iterative sprints—covering story development, peer code reviews, continuous integration quality gates, AI coding safeguards, and technical documentation updates.
 

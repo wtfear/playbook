@@ -1,3 +1,17 @@
+---
+title: "Meeting Notes Overview"
+document_type: reference
+category: "09-internal-operations-and-work-management"
+status: proposed
+owner: null
+last_reviewed: null
+related_documents:
+  - "../README.md"
+  - "../structure-guide.md"
+  - "../templates/meeting-note-template.md"
+  - "../decisions/README.md"
+---
+
 # Meeting Notes
 
 This directory stores records of internal agency discussions, strategy syncs, category deep-dives, and operational reviews.

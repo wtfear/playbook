@@ -1,3 +1,15 @@
+---
+title: "Functional Responsibility Categories Overview"
+document_type: reference
+category: "13-knowledge-systems-and-automation"
+status: proposed
+owner: null
+last_reviewed: null
+related_documents:
+  - "../README.md"
+  - "../structure-guide.md"
+---
+
 # Functional Responsibility Categories
 
 This directory contains the 13 foundational operating categories of the agency.

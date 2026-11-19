@@ -1,11 +1,17 @@
-# Category 03: Business Strategy and Governance
-
-```yaml
+---
+title: "Category 03: Business Strategy and Governance"
+document_type: reference
 category: "03-business-strategy-and-governance"
 status: proposed
+owner: null
 last_reviewed: null
-owner: null # unassigned
-```
+related_documents:
+  - "../../README.md"
+  - "../../structure-guide.md"
+  - "../README.md"
+---
+
+# Category 03: Business Strategy and Governance
 
 ## 1. Purpose
 Defines the agency's commercial business model, core service offerings, market positioning, high-level objectives, founder roles, governance structures, and formal decision-making authority.

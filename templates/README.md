@@ -1,6 +1,18 @@
+---
+title: "Document Templates Overview"
+document_type: template
+category: "13-knowledge-systems-and-automation"
+status: proposed
+owner: null
+last_reviewed: null
+related_documents:
+  - "../README.md"
+  - "../structure-guide.md"
+---
+
 # Document Templates
 
-This directory contains standardized Markdown templates for all official document types in the agency knowledge base.
+This directory contains standardized Markdown templates for official document types and system contracts in the agency knowledge base.
 
 ## Purpose
 
@@ -14,6 +26,8 @@ Standardized templates ensure consistency, readability, clear ownership, and sys
 | **Playbook** | [`playbook-template.md`](./playbook-template.md) | Recommended approaches, judgment guidelines, exceptions, and escalation paths | Advisory / Guidance |
 | **Workflow** | [`workflow-template.md`](./workflow-template.md) | Concrete sequence of actions, roles, handoffs, inputs, and outputs | Operational standard |
 | **Checklist** | [`checklist-template.md`](./checklist-template.md) | Compact verification lists to prevent errors at key milestones | Quality assurance |
+| **Engineering Topic** | [`engineering-topic-template.md`](./engineering-topic-template.md) | 8-part topic scaffold for engineering standards, specialties, and patterns | Engineering standard scaffold |
+| **Foundation Contract** | [`foundation-document-template.md`](./foundation-document-template.md) | Production application system foundation, SLOs, NFRs, architecture, and gates | Engineering contract |
 | **Research Note** | [`research-note-template.md`](./research-note-template.md) | External evidence, citations, benchmark observations, and candidate options | Informational |
 | **Decision Record** | [`decision-record-template.md`](./decision-record-template.md) | Formal records of architectural, operational, or commercial decisions | Authoritative record |
 | **Meeting Note** | [`meeting-note-template.md`](./meeting-note-template.md) | Agendas, discussions, decisions made, and follow-up action items | Operational record |

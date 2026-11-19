@@ -1,11 +1,17 @@
-# Category 04: People and Relationship Management
-
-```yaml
+---
+title: "Category 04: People and Relationship Management"
+document_type: reference
 category: "04-people-and-relationship-management"
 status: proposed
+owner: null
 last_reviewed: null
-owner: null # unassigned
-```
+related_documents:
+  - "../../README.md"
+  - "../../structure-guide.md"
+  - "../README.md"
+---
+
+# Category 04: People and Relationship Management
 
 ## 1. Purpose
 Defines how the agency attracts, onboards, supports, aligns, and manages talent (employees, contractors, and specialists), and how healthy, professional relationships are cultivated with internal team members, external partners, and key stakeholders.

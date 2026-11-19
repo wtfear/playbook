@@ -1,11 +1,17 @@
-# Category 02: Client Acquisition (CA)
-
-```yaml
+---
+title: "Category 02: Client Acquisition (CA)"
+document_type: reference
 category: "02-client-acquisition"
 status: proposed
+owner: null
 last_reviewed: null
-owner: null # unassigned
-```
+related_documents:
+  - "../../README.md"
+  - "../../structure-guide.md"
+  - "../README.md"
+---
+
+# Category 02: Client Acquisition (CA)
 
 > [!NOTE]
 > In this repository and agency context, **"CA" stands strictly for Client Acquisition** (not Chartered Accountant).

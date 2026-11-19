@@ -14,6 +14,10 @@ related_documents:
 
 # 03. Technical Delivery Lifecycle
 
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
+
 This directory defines the proposed 12-stage technical progression of software, application, and automation deliverables—tracing work from initial pre-sales intake through discovery, engineering setup, iterative build, deployment, client handover, operational maintenance, and eventual decommissioning.
 
 ## Purpose
@@ -61,7 +65,7 @@ flowchart TD
 
 ## Core Lifecycle Templates
 
-- [`foundation-document-template.md`](./foundation-document-template.md): Complete Phase 0 Foundation & System Design Contract (SLOs, NFRs, architecture, event taxonomy, threat models, and sign-off gate).
+- [`foundation-document-template.md`](../../../templates/foundation-document-template.md): Complete Phase 0 Foundation & System Design Contract (SLOs, NFRs, architecture, event taxonomy, threat models, and sign-off gate).
 
 ## Open Questions
 

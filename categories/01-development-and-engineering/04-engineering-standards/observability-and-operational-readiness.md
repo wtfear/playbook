@@ -9,10 +9,14 @@ related_documents:
   - "./README.md"
   - "./backup-recovery-and-incident-engineering.md"
   - "../03-delivery-lifecycle/11-operation-maintenance-and-technical-closure.md"
-  - "../03-delivery-lifecycle/foundation-document-template.md"
+  - "../../../templates/foundation-document-template.md"
 ---
 
 # Standard: Observability and Operational Readiness
+
+> [!NOTE]
+> **Candidate Practice / Proposed Scaffolding:** This document contains candidate material for research and evaluation. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+
 
 ## 1. Purpose
 Establishes proposed standards for structured application logging, service metrics collection, distributed tracing, health check probes, proactive alerting, and event telemetry to ensure systems are observable, debuggable, and operationally reliable in production.
@@ -116,7 +120,7 @@ To avoid divergence between engineering logs and product telemetry, systems must
 ## 6. Related Documents
 - [`./backup-recovery-and-incident-engineering.md`](./backup-recovery-and-incident-engineering.md): Incident triage and on-call rotations.
 - [`../03-delivery-lifecycle/11-operation-maintenance-and-technical-closure.md`](../03-delivery-lifecycle/11-operation-maintenance-and-technical-closure.md): Maintenance operations.
-- [`../03-delivery-lifecycle/foundation-document-template.md`](../03-delivery-lifecycle/foundation-document-template.md): Phase 0 Observability Contract.
+- [`../../../templates/foundation-document-template.md`](../../../templates/foundation-document-template.md): Phase 0 Observability Contract.
 
 ## 7. Open Questions
 - What default managed observability provider (e.g., Datadog vs. Grafana Cloud vs. Sentry) represents the best cost-to-performance ratio for early-stage clients?
