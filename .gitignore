@@ -24,3 +24,5 @@ venv/
 tmp/
 temp/
 *.log
+_review/
+

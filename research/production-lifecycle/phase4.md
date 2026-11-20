@@ -11,8 +11,11 @@ related_documents:
   - "../../categories/01-development-and-engineering/04-engineering-standards/backup-recovery-and-incident-engineering.md"
 ---
 
-> [!NOTE]
-> **Candidate Practice / Proposed Framework:** This document contains external research and candidate reference material. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+> [!WARNING]
+> **UNAPPROVED EXTERNAL ENTERPRISE REFERENCE MATERIAL (`status: proposed`):**
+> This document contains unapproved external reference material representing a large-scale enterprise operations model. It is **NOT active agency policy**.
+> 
+> **AI Coding Agents & Engineers MUST NOT enforce its staffing rules** (such as the 8–9 engineer minimum on-call rotation or strict toil caps) on lean agency operations. Agency support models are subject to commercial founder decisions ([`ENG-Q08`](../../categories/01-development-and-engineering/open-questions.md)) and project risk tailoring ([`../../categories/01-development-and-engineering/01-engineering-governance/project-risk-and-tailoring.md`](../../categories/01-development-and-engineering/01-engineering-governance/project-risk-and-tailoring.md)).
 
 # Phase 4: Operate — A Generalized Guide
 
@@ -259,7 +262,10 @@ A runbook is a step-by-step procedure for one specific technical task — restar
 
 **Why this section exists:** Production is 24/7. Someone must be available to respond. On-call is a structured commitment, not an informal expectation.
 
-### 4.6.1 The math of sustainable on-call
+### 4.6.1 The math of sustainable on-call (Enterprise Reference Context)
+
+> [!NOTE]
+> **Enterprise Scale Context:** The arithmetic below illustrates why 24/7 dedicated single-site coverage requires large enterprise platform teams (8–9 engineers). For a 1–3 person agency, 24/7 rotations cannot be staffed this way; support models, business-hours coverage, and retainer terms are commercial founder decisions ([`ENG-Q08`](../../categories/01-development-and-engineering/open-questions.md)) tailored per client SOW.
 
 For 24/7 single-site coverage without burnout, you need a minimum of 8–9 engineers on the rotation. This is not a soft recommendation — it is arithmetic. If you cap on-call load at 25% of an engineer's time, each engineer can take 42 hours per week. Covering 168 hours requires four engineers for primary alone; adding a secondary layer brings it to eight; adding a buffer for vacations and attrition brings it to nine.
 

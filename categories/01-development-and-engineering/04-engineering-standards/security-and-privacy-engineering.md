@@ -43,6 +43,7 @@ Applies universally across all deliverables: web applications, mobile apps, back
 - **Lightweight Threat Modeling (STRIDE-lite):** Conduct a 30-minute threat modeling session during Solution Design (Lifecycle 04) to map trust boundaries, data flows, and external attack surfaces before writing code.
 - **Small-Team Simplicity:** Favor automated SAST tooling with low false-positive rates (e.g., Semgrep default security rules) and automated dependency patching bots (Dependabot/Renovate).
 - **Security Headers by Default:** Configure standard HTTP security headers across all web servers and API gateways: `Content-Security-Policy`, `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy: strict-origin-when-cross-origin`.
+- **Scoped Outbound Egress & Allowlisting:** Where network isolation or egress controls are applied to runtime environments, enforce an allowlist/proxy model that explicitly permits documented external endpoints required for agency workloads (such as LLM provider APIs for AI agents, payment gateways, messaging APIs, and approved webhooks) rather than blanket egress lockdowns that break legitimate integrations.
 - **Foreign Client Nuance:** When serving international clients across borders, account for data residency requirements and localized privacy mandates early in the architecture phase.
 
 ---
@@ -60,6 +61,7 @@ Applies universally across all deliverables: web applications, mobile apps, back
 - [ ] Automated SAST (Semgrep) and SCA (Dependabot) passing in CI with 0 High/Critical findings.
 - [ ] Parameterized queries verified across 100% of database interactions.
 - [ ] Server-side authorization verified by automated role-based integration tests.
+- [ ] Outbound egress connections scoped and verified to allowlisted endpoints (LLM APIs, payment gateways, messaging) where network filtering is active.
 - [ ] Data erasure and export endpoints verified against privacy compliance requirements.
 
 ---

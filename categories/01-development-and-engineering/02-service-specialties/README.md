@@ -61,6 +61,9 @@ flowchart TD
 | [`data-engineering-and-analytics.md`](./data-engineering-and-analytics.md) | ETL/ELT data pipelines, warehouses, reporting systems | Unconfirmed |
 | [`cloud-and-platform-engineering.md`](./cloud-and-platform-engineering.md) | Infrastructure-as-code, serverless, container platforms | Unconfirmed |
 | [`desktop-applications.md`](./desktop-applications.md) | Cross-platform desktop apps (Electron, Tauri, native) | Unconfirmed |
+| [`e-commerce-and-transactional-web.md`](./e-commerce-and-transactional-web.md) | E-commerce storefronts, checkout, payment tokenization | Unconfirmed |
+| [`low-code-and-cms-platforms.md`](./low-code-and-cms-platforms.md) | Headless/monolithic CMS, visual builders, low-code automations | Unconfirmed |
+| [`messaging-bots-and-conversational-agents.md`](./messaging-bots-and-conversational-agents.md) | WhatsApp, Telegram, Slack bots, conversational UI | Unconfirmed |
 
 ## Related Agency Categories
 

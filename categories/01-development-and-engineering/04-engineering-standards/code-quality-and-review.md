@@ -27,7 +27,8 @@ Establishes proposed standards for code readability, automated formatting, stati
 - Pull request (PR) author responsibilities: self-review, concise descriptions, screenshots/recordings for UI changes, and linked issue tickets.
 - Pull request sizing guidelines (target: < 400 lines of diff to ensure thorough reviewer comprehension).
 - Code reviewer responsibilities: checking architectural alignment, edge-case coverage, test quality, and providing constructive, actionable feedback.
-- Approval and merge rules: minimum one approved peer review required on default branches.
+- Approval and merge rules: when two or more engineers are assigned to a project, at least one approved peer review is required before merging into default branches.
+- **Solo-Engineer Fallback:** [Pending Founder Decision — see [`../open-questions.md`](../open-questions.md) and [`../01-engineering-governance/roles-and-ownership.md`](../01-engineering-governance/roles-and-ownership.md)]. When a project is staffed by a single engineer, merge blocking must not halt delivery; solo projects operate under an approved fallback protocol (e.g., green automated CI checks combined with an explicit author self-review checklist, or asynchronous founder review) so delivery is never paralyzed.
 
 ## 3. Applicability
 Applies to all code committed to agency repositories or client deliverables.

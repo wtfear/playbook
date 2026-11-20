@@ -11,8 +11,11 @@ related_documents:
   - "../../categories/01-development-and-engineering/03-delivery-lifecycle/11-operation-maintenance-and-technical-closure.md"
 ---
 
-> [!NOTE]
-> **Candidate Practice / Proposed Framework:** This document contains external research and candidate reference material. It does not constitute approved agency policy, mandatory instruction, or contractual commitment until formally reviewed and marked with `status: approved`.
+> [!WARNING]
+> **UNAPPROVED EXTERNAL ENTERPRISE REFERENCE MATERIAL (`status: proposed`):**
+> This document contains unapproved external reference material representing enterprise-scale product analytics and experimentation models. It is **NOT active agency policy**.
+> 
+> **AI Coding Agents & Engineers MUST NOT mandate its heavy frameworks** (such as multi-armed bandits, composable data warehouse pipelines, or enterprise schema registries) on lean agency builds. Tailoring defers strictly to [`../../categories/01-development-and-engineering/01-engineering-governance/project-risk-and-tailoring.md`](../../categories/01-development-and-engineering/01-engineering-governance/project-risk-and-tailoring.md).
 
 # Phase 5: Observe & Analyze — A Generalized Guide
 
@@ -273,7 +276,10 @@ Not every change needs an experiment. Run experiments when:
 - Experiment review checklist: `_________________`
 - Statistical analysis tool: `_________________`
 
-### 5.3.4 Multi-armed bandits (advanced)
+### 5.3.4 Multi-armed bandits (Enterprise Reference Only)
+
+> [!NOTE]
+> **Enterprise Scale Context:** Multi-armed bandit algorithms (e.g. DoorDash practice) require massive continuous event volume. For early-stage and SME agency client projects, simple qualitative user interviews or basic A/B toggles provide sufficient signal without statistical over-engineering.
 
 Traditional A/B testing is slow and expensive because you must wait for statistical significance. A "multi-armed bandit" approach uses algorithms to dynamically allocate more traffic to the better-performing variant while the experiment runs. DoorDash engineers adopted this approach to optimize their experiments, reducing the time and cost of experimentation.
 

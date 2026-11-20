@@ -38,6 +38,13 @@ This register tracks unresolved architectural, operational, and technical govern
 | **ENG-Q08** | On-Call & SLAs | How will after-hours on-call support be staffed, rotated, and compensated for client maintenance retainers? | Medium: Team burnout and SLA breach penalties. | Open | Align with People & Finance |
 | **ENG-Q09** | Domain & DNS Billing | Who registers and pays for client production domains, SSL certificates, and DNS services post-handover? | Medium: Recurring billing disputes and account ownership transfer. | Open | Align with Finance & Delivery |
 | **ENG-Q10** | Pre-Commit Hooks | Should local pre-commit secret scanning hooks (e.g., Gitleaks) be enforced via repository configs or left to individual developer choice? | High: Preventing accidental secret leakage before remote push. | Open | Standardize in starter repos |
+| **ENG-Q11** | Service Boundaries | Should game development and 3D interactive graphics be formally ruled out-of-scope for the agency? | Medium: Focus agency positioning and sales pipeline. | Open | Discuss with Sales & Leadership |
+| **ENG-Q12** | Service Boundaries | Under what conditions (if any) should the agency accept embedded systems, firmware, or physical IoT engineering projects? | High: Hardware lab overhead, specialized testing equipment. | Open | Discuss with Leadership |
+| **ENG-Q13** | Service Boundaries | What is the agency policy on smart contract development, Web3 protocols, and cryptocurrency integrations? | High: Regulatory, security liability, smart contract audit overhead. | Open | Align with Legal & Leadership |
+| **ENG-Q14** | Service Boundaries | Are native AR/VR (VisionOS, Meta Quest) spatial computing applications in scope or referred to specialized partners? | Low: Niche market demand vs. hardware investment. | Open | Discuss with Sales |
+| **ENG-Q15** | Architecture | When building content sites, what criteria determine choosing a headless CMS (Sanity, Strapi) vs traditional monolithic CMS (WordPress, Webflow)? | Medium: Client self-service editorial autonomy vs. engineering control. | Open | Establish architectural rubric |
+| **ENG-Q16** | Infrastructure | Should vector databases for AI RAG be hosted as embedded engines (pgvector, Chroma) or dedicated managed cloud clusters (Pinecone, Qdrant)? | High: Cost efficiency, maintenance overhead, query latency. | Open | Benchmark cost vs query scale |
+| **ENG-Q17** | Infrastructure | What default transactional email service provider (ESP) should the agency recommend to clients (Resend, Postmark, AWS SES)? | Medium: Developer experience, deliverability reputation, pricing tier. | Open | Evaluate ESP vendor tiers |
 
 ---
 

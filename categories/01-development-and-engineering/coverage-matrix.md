@@ -147,3 +147,46 @@ This matrix establishes explicit canonical documentation homes for all core engi
 | **Delivery velocity & quality measures** | [`06-engineering-improvement/delivery-and-quality-measures.md`](./06-engineering-improvement/delivery-and-quality-measures.md) | All stages | [`09-internal-operations-and-work-management`](../09-internal-operations-and-work-management/README.md) | Agency-wide | Primary (DORA Core 4) | Lightweight team dashboard tool |
 | **Retrospectives & root-cause learning** | [`06-engineering-improvement/retrospective-and-root-cause-learning.md`](./06-engineering-improvement/retrospective-and-root-cause-learning.md) | All stages | None (Engineering owned) | Completed milestones | Primary (Blameless Post-Mortem) | Post-mortem trigger severity |
 | **Engineering improvement backlog** | [`06-engineering-improvement/improvement-backlog.md`](./06-engineering-improvement/improvement-backlog.md) | All stages | None (Engineering owned) | Internal operations | Internal register | Quarterly review rhythm |
+
+---
+
+## 9. Service Specialties Coverage
+
+| Required Specialty | Canonical Document | Related Lifecycle Stage(s) | Cross-Category Dependency | Applicability | Evidence Status | Open Gap / Decision |
+| :--- | :--- | :---: | :--- | :--- | :--- | :--- |
+| **Web Apps & Websites** | [`02-service-specialties/web-applications-and-websites.md`](./02-service-specialties/web-applications-and-websites.md) | Stages 01–10 | [`05-sales`](../05-sales/README.md) | Web deliverables | Primary (Web Standards) | Default SPA/SSR framework |
+| **Backend APIs & Integrations** | [`02-service-specialties/backend-apis-and-integrations.md`](./02-service-specialties/backend-apis-and-integrations.md) | Stages 04–09 | None (Engineering owned) | Backend deliverables | Primary (Cloud Architecture) | Microservices vs Monolith threshold |
+| **AI Applications & Agents** | [`02-service-specialties/ai-applications-and-agents.md`](./02-service-specialties/ai-applications-and-agents.md) | Stages 01–11 | [`12-legal-security-and-risk-management`](../12-legal-security-and-risk-management/README.md) | AI/LLM deliverables | Primary (NIST AI RMF) | Human confirmation boundary |
+| **Data Engineering & Analytics** | [`02-service-specialties/data-engineering-and-analytics.md`](./02-service-specialties/data-engineering-and-analytics.md) | Stages 04–10 | [`10-finance-and-money-management`](../10-finance-and-money-management/README.md) | Data deliverables | Primary (Data Engineering) | ETL orchestration runner |
+| **Cloud & Platform Engineering** | [`02-service-specialties/cloud-and-platform-engineering.md`](./02-service-specialties/cloud-and-platform-engineering.md) | Stages 06, 09, 11 | [`10-finance-and-money-management`](../10-finance-and-money-management/README.md) | Cloud systems | Primary (IaC Standards) | Terraform vs Pulumi vs OpenTofu |
+| **Automation & Business Systems** | [`02-service-specialties/automation-and-business-systems.md`](./02-service-specialties/automation-and-business-systems.md) | Stages 04, 07, 10 | [`11-project-delivery-and-client-service`](../11-project-delivery-and-client-service/README.md) | Automation deliverables | Primary (Workflow Engines) | Integration retry and idempotency |
+| **Mobile Applications** | [`02-service-specialties/mobile-applications.md`](./02-service-specialties/mobile-applications.md) | Stages 01–10 | [`11-project-delivery-and-client-service`](../11-project-delivery-and-client-service/README.md) | Mobile deliverables | Primary (Store Guidelines) | App Store review lead time |
+| **Desktop Applications** | [`02-service-specialties/desktop-applications.md`](./02-service-specialties/desktop-applications.md) | Stages 01–10 | None (Engineering owned) | Desktop deliverables | Primary (Electron/Tauri) | Code signing certificates |
+| **E-Commerce & Transactional Web** | [`02-service-specialties/e-commerce-and-transactional-web.md`](./02-service-specialties/e-commerce-and-transactional-web.md) | Stages 01–11 | [`10-finance-and-money-management`](../10-finance-and-money-management/README.md), [`12-legal-security-and-risk-management`](../12-legal-security-and-risk-management/README.md) | Commerce deliverables | Primary (PCI DSS v4.0) | Payment gateway tokenization |
+| **Low-Code & CMS Platforms** | [`02-service-specialties/low-code-and-cms-platforms.md`](./02-service-specialties/low-code-and-cms-platforms.md) | Stages 01–10 | [`05-sales`](../05-sales/README.md), [`11-project-delivery-and-client-service`](../11-project-delivery-and-client-service/README.md) | CMS/Portal deliverables | Primary (Headless CMS) | Headless vs monolithic CMS rubric |
+| **Messaging Bots & Chatbots** | [`02-service-specialties/messaging-bots-and-conversational-agents.md`](./02-service-specialties/messaging-bots-and-conversational-agents.md) | Stages 01–11 | [`12-legal-security-and-risk-management`](../12-legal-security-and-risk-management/README.md) | Chatbot deliverables | Primary (Platform APIs) | Webhook concurrency & deduplication |
+
+---
+
+## 10. Specialized Engineering Standards Coverage
+
+| Required Subject | Canonical Document | Related Lifecycle Stage(s) | Cross-Category Dependency | Applicability | Evidence Status | Open Gap / Decision |
+| :--- | :--- | :---: | :--- | :--- | :--- | :--- |
+| **System Architecture Styles** | [`04-engineering-standards/system-architecture-styles-and-patterns.md`](./04-engineering-standards/system-architecture-styles-and-patterns.md) | Stage 04 | None (Engineering owned) | Universal | Primary (Martin Fowler, SWEBOK v4) | Monolith to microservices threshold |
+| **Technical SEO & Discoverability** | [`04-engineering-standards/technical-seo-and-web-discoverability.md`](./04-engineering-standards/technical-seo-and-web-discoverability.md) | Stages 04, 08 | [`06-marketing`](../06-marketing/README.md) | Public web deliverables | Primary (Google Search Central) | SSR vs SSG architectural default |
+| **RAG & Retrieval Systems** | [`04-engineering-standards/rag-and-retrieval-systems.md`](./04-engineering-standards/rag-and-retrieval-systems.md) | Stages 04, 07, 08 | [`12-legal-security-and-risk-management`](../12-legal-security-and-risk-management/README.md) | RAG / Search deliverables | Primary (RAG Triad, OWASP LLM08) | Self-hosted vs managed vector DB |
+| **LLMOps & Model Governance** | [`04-engineering-standards/llmops-and-model-governance.md`](./04-engineering-standards/llmops-and-model-governance.md) | Stages 06, 09, 11 | [`10-finance-and-money-management`](../10-finance-and-money-management/README.md), [`12-legal-security-and-risk-management`](../12-legal-security-and-risk-management/README.md) | AI/LLM systems | Primary (NIST AI RMF, OWASP LLM) | Unified model gateway proxy |
+| **Client Constraints & Enterprise Access** | [`04-engineering-standards/client-constraints-and-enterprise-access.md`](./04-engineering-standards/client-constraints-and-enterprise-access.md) | Stages 01, 06, 12 | [`11-project-delivery-and-client-service`](../11-project-delivery-and-client-service/README.md), [`12-legal-security-and-risk-management`](../12-legal-security-and-risk-management/README.md) | Enterprise client builds | Primary (NIST SP 800-207 ZTNA) | Enterprise intake discovery form |
+
+---
+
+## 11. External Benchmark & Research Notes Mapping
+
+| Research Topic | Central Research Note | Relevant Category 01 Standards | External Authority | Key Finding |
+| :--- | :--- | :--- | :--- | :--- |
+| **Software Engineering Disciplines** | [`../../research/rn-01-swebok-v4-knowledge-areas.md`](../../research/rn-01-swebok-v4-knowledge-areas.md) | All Standards | IEEE Computer Society | Validates 18 KAs including standalone Architecture, Security, and Operations. |
+| **AI Risk & Trustworthiness** | [`../../research/rn-01-nist-ai-rmf-governance.md`](../../research/rn-01-nist-ai-rmf-governance.md) | `02-ai-applications-and-agents.md`, `04-llmops-and-model-governance.md` | NIST AI 100-1 | Establishes GOVERN, MAP, MEASURE, MANAGE functions for AI applications. |
+| **LLM Application Security** | [`../../research/rn-01-owasp-llm-top-10.md`](../../research/rn-01-owasp-llm-top-10.md) | `04-security-and-privacy-engineering.md`, `04-llmops-and-model-governance.md` | OWASP Foundation | Categorizes 10 threat vectors including Prompt Injection and Excessive Agency. |
+| **Software Product Quality Model** | [`../../research/rn-01-iso-25010-software-quality.md`](../../research/rn-01-iso-25010-software-quality.md) | `03-technical-intake-and-handoff.md`, `04-testing-and-quality-engineering.md` | ISO/IEC 25010:2023 | Defines 9 software quality characteristics for NFRs and acceptance criteria. |
+| **Web Discoverability & Rendering** | [`../../research/rn-01-google-search-central-technical-seo.md`](../../research/rn-01-google-search-central-technical-seo.md) | `04-technical-seo-and-web-discoverability.md`, `04-performance-and-capacity.md` | Google Search Central | Outlines crawling, WRS JavaScript rendering, sitemaps, and Core Web Vitals. |
+| **Cloud-Native Architecture** | [`../../research/rn-01-twelve-factor-modern-evolution.md`](../../research/rn-01-twelve-factor-modern-evolution.md) | `04-environments-configuration-and-secrets.md`, `04-system-architecture-styles-and-patterns.md` | Heroku / O'Reilly | Standardizes 12 factors + API First, Telemetry, and Zero Trust for portable services. |

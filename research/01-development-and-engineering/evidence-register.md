@@ -75,7 +75,7 @@ This register records primary external standards, verified literature, and indus
 - **Date Accessed:** 2026-11-18
 - **Document Status:** Official Web Standard (Backward-compatible with WCAG 2.1 and 2.0).
 - **Core Findings & Principles:**
-  - Adds 9 new success criteria addressing cognitive disabilities, mobile/touch interactions, and low-vision needs: Focus Appearance (2.4.11), Target Size (2.5.8), Dragging Movements (2.5.7), Consistent Help (3.2.6), Accessible Authentication (3.3.7 & 3.3.8), Redundant Entry (3.3.9).
+  - Adds 9 new success criteria addressing cognitive disabilities, mobile/touch interactions, and low-vision needs: Focus Not Obscured (Minimum) (2.4.11), Focus Not Obscured (Enhanced) (2.4.12), Focus Appearance (2.4.13, Level AAA), Target Size (Minimum) (2.5.8), Dragging Movements (2.5.7), Consistent Help (3.2.6), Accessible Authentication (Minimum) (3.3.7), Accessible Authentication (Enhanced) (3.3.8), Redundant Entry (3.3.9).
   - Deprecates and removes criterion 4.1.1 (Parsing) due to modern HTML parser robustness.
   - Establishes Level AA as the recognized global standard for public commercial interfaces.
 - **Agency Applicability & Limitations:**
