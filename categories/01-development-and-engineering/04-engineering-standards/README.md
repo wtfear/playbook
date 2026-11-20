@@ -51,6 +51,11 @@ To establish shared, reusable engineering practices that guarantee consistent te
 | [`backup-recovery-and-incident-engineering.md`](./backup-recovery-and-incident-engineering.md) | RTO/RPO, backup drills, incident response | NIST SP 800-61 |
 | [`technical-documentation.md`](./technical-documentation.md) | Docs-as-code, READMEs, runbooks, schemas | Diátaxis Framework |
 | [`ai-assisted-development.md`](./ai-assisted-development.md) | Coding assistants, prompt hygiene, review gates | OWASP Top 10 for LLMs |
+| [`system-architecture-styles-and-patterns.md`](./system-architecture-styles-and-patterns.md) | Architectural styles, monolith vs modular, CQRS/event-driven | Martin Fowler, SWEBOK v4 |
+| [`technical-seo-and-web-discoverability.md`](./technical-seo-and-web-discoverability.md) | Web crawlability, rendering, indexing, structured data | Google Search Central, Schema.org |
+| [`rag-and-retrieval-systems.md`](./rag-and-retrieval-systems.md) | Chunking, embedding models, vector search, reranking, RAG evaluation | RAG Triad, OWASP LLM08 |
+| [`llmops-and-model-governance.md`](./llmops-and-model-governance.md) | Prompt versioning, model gateways, token spend tracking, guardrails | NIST AI RMF, OWASP LLM Top 10 |
+| [`client-constraints-and-enterprise-access.md`](./client-constraints-and-enterprise-access.md) | Enterprise VPN, ZTNA, package proxies, least-privilege IAM | NIST SP 800-207, ISO 27001 |
 
 ## Open Questions
 

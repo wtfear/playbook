@@ -68,14 +68,14 @@ Tagged every gap as `Core` (universal across projects), `Specialty` (specific de
 
 | ID | Gap Name | Tag | Status | Evidence in Current Repo | Source | Boundary Owner | Recommended Action | Planned Canonical Home |
 | :---: | :--- | :---: | :---: | :--- | :---: | :--- | :--- | :--- |
-| **GAP-01** | System Architecture Styles & Patterns | `Core` | `PARTIAL` | `04-engineering-standards/architecture-and-technical-decisions.md` covers ADR templates, but lacks guidance on monolith vs microservices, async boundaries, or event-driven patterns. | A, B | Engineering | **New File (1 of 8)** | `04-engineering-standards/system-architecture-styles-and-patterns.md` |
-| **GAP-02** | Technical SEO & Web Discoverability | `Specialty` | `PARTIAL` | `04-engineering-standards/performance-and-capacity.md` touches Core Web Vitals, but crawlable rendering (SSR/SSG), sitemaps, canonicals, and Schema.org are completely absent. | A, B, C | Engineering / Marketing | **New File (2 of 8)** | `04-engineering-standards/technical-seo-and-web-discoverability.md` |
-| **GAP-03** | E-Commerce & Transactional Web | `Specialty` | `ABSENT` | No coverage of shopping cart state, checkout flows, payment tokenization, inventory races, or tax calculations anywhere in repo. | A, C | Engineering / Finance / Legal | **New File (3 of 8)** | `02-service-specialties/e-commerce-and-transactional-web.md` |
-| **GAP-04** | Low-Code & CMS Platforms | `Specialty` | `ABSENT` | `02-service-specialties/automation-and-business-systems.md` covers custom automation scripts, but headless vs traditional CMS (WordPress, Webflow, Shopify, Sanity) and visual builders are missing. | A, C | Engineering / Sales | **New File (4 of 8)** | `02-service-specialties/low-code-and-cms-platforms.md` |
-| **GAP-05** | Messaging Bots & Conversational Agents | `Specialty` | `ABSENT` | `02-service-specialties/ai-applications-and-agents.md` discusses general LLMs, but chat platform webhooks (WhatsApp, Telegram, Slack), deduplication, and rate limits have no home. | A, C | Engineering / Delivery | **New File (5 of 8)** | `02-service-specialties/messaging-bots-and-conversational-agents.md` |
-| **GAP-06** | RAG & Retrieval Systems | `Core` (AI) | `ABSENT` | `02-service-specialties/ai-applications-and-agents.md` mentions RAG as a concept, but chunking, embeddings, vector DBs, reranking, and retrieval evals are completely absent. | A, B, C | Engineering | **New File (6 of 8)** | `04-engineering-standards/rag-and-retrieval-systems.md` |
-| **GAP-07** | LLMOps & Model Governance | `Core` (AI) | `ABSENT` | `04-engineering-standards/ai-assisted-development.md` covers developer IDE assistants, but production prompt versioning, gateways, token spend limits, and guardrails are absent. | A, B, C | Engineering / Finance | **New File (7 of 8)** | `04-engineering-standards/llmops-and-model-governance.md` |
-| **GAP-08** | Client Constraints & Enterprise Access | `Situational` | `PARTIAL` | `03-delivery-lifecycle/01-technical-intake-and-handoff.md` mentions client environments, but lacks procedures for corporate VPNs, ZTNA, package proxies, and compliance audits. | A, C | Engineering / Legal / Delivery | **New File (8 of 8)** | `04-engineering-standards/client-constraints-and-enterprise-access.md` |
+| **GAP-01** | System Architecture Styles & Patterns | `Core` | `SCAFFOLDED` | `04-engineering-standards/architecture-and-technical-decisions.md` covers ADR templates, but lacked guidance on monolith vs microservices, async boundaries, or event-driven patterns. Scaffold created. | A, B | Engineering | **Created Scaffolding (1 of 8)** | [`04-engineering-standards/system-architecture-styles-and-patterns.md`](./04-engineering-standards/system-architecture-styles-and-patterns.md) |
+| **GAP-02** | Technical SEO & Web Discoverability | `Specialty` | `SCAFFOLDED` | `04-engineering-standards/performance-and-capacity.md` touches Core Web Vitals, but crawlable rendering (SSR/SSG), sitemaps, canonicals, and Schema.org were absent. Scaffold created. | A, B, C | Engineering / Marketing | **Created Scaffolding (2 of 8)** | [`04-engineering-standards/technical-seo-and-web-discoverability.md`](./04-engineering-standards/technical-seo-and-web-discoverability.md) |
+| **GAP-03** | E-Commerce & Transactional Web | `Specialty` | `SCAFFOLDED` | No coverage of shopping cart state, checkout flows, payment tokenization, inventory races, or tax calculations existed. Scaffold created. | A, C | Engineering / Finance / Legal | **Created Scaffolding (3 of 8)** | [`02-service-specialties/e-commerce-and-transactional-web.md`](./02-service-specialties/e-commerce-and-transactional-web.md) |
+| **GAP-04** | Low-Code & CMS Platforms | `Specialty` | `SCAFFOLDED` | `02-service-specialties/automation-and-business-systems.md` covers custom automation scripts, but headless vs traditional CMS (WordPress, Webflow, Shopify, Sanity) was missing. Scaffold created. | A, C | Engineering / Sales | **Created Scaffolding (4 of 8)** | [`02-service-specialties/low-code-and-cms-platforms.md`](./02-service-specialties/low-code-and-cms-platforms.md) |
+| **GAP-05** | Messaging Bots & Conversational Agents | `Specialty` | `SCAFFOLDED` | `02-service-specialties/ai-applications-and-agents.md` discusses general LLMs, but chat platform webhooks (WhatsApp, Telegram, Slack), deduplication, and rate limits had no home. Scaffold created. | A, C | Engineering / Delivery | **Created Scaffolding (5 of 8)** | [`02-service-specialties/messaging-bots-and-conversational-agents.md`](./02-service-specialties/messaging-bots-and-conversational-agents.md) |
+| **GAP-06** | RAG & Retrieval Systems | `Core` (AI) | `SCAFFOLDED` | `02-service-specialties/ai-applications-and-agents.md` mentions RAG as a concept, but chunking, embeddings, vector DBs, reranking, and retrieval evals were absent. Scaffold created. | A, B, C | Engineering | **Created Scaffolding (6 of 8)** | [`04-engineering-standards/rag-and-retrieval-systems.md`](./04-engineering-standards/rag-and-retrieval-systems.md) |
+| **GAP-07** | LLMOps & Model Governance | `Core` (AI) | `SCAFFOLDED` | `04-engineering-standards/ai-assisted-development.md` covers developer IDE assistants, but production prompt versioning, gateways, token spend limits, and guardrails were absent. Scaffold created. | A, B, C | Engineering / Finance | **Created Scaffolding (7 of 8)** | [`04-engineering-standards/llmops-and-model-governance.md`](./04-engineering-standards/llmops-and-model-governance.md) |
+| **GAP-08** | Client Constraints & Enterprise Access | `Situational` | `SCAFFOLDED` | `03-delivery-lifecycle/01-technical-intake-and-handoff.md` mentions client environments, but lacked procedures for corporate VPNs, ZTNA, package proxies, and compliance audits. Scaffold created. | A, C | Engineering / Legal / Delivery | **Created Scaffolding (8 of 8)** | [`04-engineering-standards/client-constraints-and-enterprise-access.md`](./04-engineering-standards/client-constraints-and-enterprise-access.md) |
 | **GAP-09** | Email Deliverability & Transactional Messaging | `Core` | `PARTIAL` | Missing SPF, DKIM, DMARC DNS records, bounce handling webhooks, and transactional template management. | A, C | Engineering / Marketing | **Sub-item of Existing File** | Sub-item in `04-engineering-standards/environments-configuration-and-secrets.md` and `api-and-integration-engineering.md` |
 | **GAP-10** | Real-Time WebSockets & Streaming | `Specialty` | `PARTIAL` | `04-engineering-standards/api-and-integration-engineering.md` covers REST/GraphQL, but lacks WebSocket connection lifecycles, SSE, room fan-out, and backpressure. | A, C | Engineering | **Sub-item of Existing File** | Sub-item in `04-engineering-standards/api-and-integration-engineering.md` |
 | **GAP-11** | Forms, Anti-Spam & User Input Security | `Core` | `PARTIAL` | `04-engineering-standards/validation-across-lifecycle.md` covers validation, but CAPTCHA policy (never solve programmatically), honeypots, and spam filtering need explicit homes. | A, C | Engineering / Legal | **Sub-item of Existing File** | Sub-item in `04-engineering-standards/security-and-privacy-engineering.md` |
@@ -102,31 +102,31 @@ Tagged every gap as `Core` (universal across projects), `Specialty` (specific de
 
 ## 4. Synthesis of Recommended Standalone Scaffolds (Max 8)
 
-The following 8 high-impact technical files are proposed for creation in Phase 2, strictly following the repo's 8-part topic shape and `status: proposed` convention:
+The following 8 high-impact technical files have been created as candidate scaffolds in Phase 2, strictly following the repo's 8-part topic shape and `status: proposed` convention:
 
-1. **`04-engineering-standards/system-architecture-styles-and-patterns.md` (GAP-01):**  
+1. **[`04-engineering-standards/system-architecture-styles-and-patterns.md`](./04-engineering-standards/system-architecture-styles-and-patterns.md) (GAP-01):**  
    Establishes core architectural patterns (modular monolith default, microservices extraction thresholds, event-driven decoupling, CQRS, C4 diagrams) to prevent premature over-engineering while ensuring scalability.
-2. **`04-engineering-standards/technical-seo-and-web-discoverability.md` (GAP-02):**  
+2. **[`04-engineering-standards/technical-seo-and-web-discoverability.md`](./04-engineering-standards/technical-seo-and-web-discoverability.md) (GAP-02):**  
    Defines the technical crawlability, rendering (SSR/SSG), XML sitemaps, robots.txt, canonicalization, and Schema.org structured data standards required for discoverable web deliverables.
-3. **`02-service-specialties/e-commerce-and-transactional-web.md` (GAP-03):**  
+3. **[`02-service-specialties/e-commerce-and-transactional-web.md`](./02-service-specialties/e-commerce-and-transactional-web.md) (GAP-03):**  
    Provides the deliverable archetype guide for transactional websites, cart and checkout handling, payment tokenization (PCI DSS SAQ-A), webhook idempotency, and inventory concurrency.
-4. **`02-service-specialties/low-code-and-cms-platforms.md` (GAP-04):**  
+4. **[`02-service-specialties/low-code-and-cms-platforms.md`](./02-service-specialties/low-code-and-cms-platforms.md) (GAP-04):**  
    Defines architectural and technical delivery rubrics for headless CMS vs monolithic CMS (WordPress, Webflow, Shopify, Sanity), visual builders, and automation platform export ownership.
-5. **`02-service-specialties/messaging-bots-and-conversational-agents.md` (GAP-05):**  
+5. **[`02-service-specialties/messaging-bots-and-conversational-agents.md`](./02-service-specialties/messaging-bots-and-conversational-agents.md) (GAP-05):**  
    Guides engineering for conversational bots (WhatsApp, Telegram, Slack), platform webhook concurrency, message deduplication, rate limits, and fallback to human agents.
-6. **`04-engineering-standards/rag-and-retrieval-systems.md` (GAP-06):**  
+6. **[`04-engineering-standards/rag-and-retrieval-systems.md`](./04-engineering-standards/rag-and-retrieval-systems.md) (GAP-06):**  
    Establishes retrieval engineering standards for AI projects: document chunking, embeddings, vector database selection, reranking, and RAG Triad evaluation metrics.
-7. **`04-engineering-standards/llmops-and-model-governance.md` (GAP-07):**  
+7. **[`04-engineering-standards/llmops-and-model-governance.md`](./04-engineering-standards/llmops-and-model-governance.md) (GAP-07):**  
    Establishes runtime operational governance for LLMs: prompt versioning, unified model gateways, fallback routing, token spend ceilings, and prompt injection defenses.
-8. **`04-engineering-standards/client-constraints-and-enterprise-access.md` (GAP-08):**  
+8. **[`04-engineering-standards/client-constraints-and-enterprise-access.md`](./04-engineering-standards/client-constraints-and-enterprise-access.md) (GAP-08):**  
    Establishes engineering procedures when operating inside client-owned environments, corporate VPNs/ZTNA, package proxies, enterprise Git repositories, and compliance audit frameworks.
 
 ---
 
-## 5. Next Steps for Phase 2
+## 5. Next Steps for Phase 2 & Sub-Items
 
-Upon user review and approval of this register:
-1. Proceed with Phase 2 scaffolding for the **approved standalone files** (up to 8 files).
-2. Sequentially incorporate the approved **sub-items into existing files**.
-3. Record boundary questions (`ENG-Q11`–`ENG-Q14`) in `open-questions.md`.
-4. Validate all links, frontmatter, and headings with `node scripts/validate-docs.js`.
+1. [x] Scaffolding created for the **8 approved standalone files**.
+2. [x] Research notes created in `research/` with `"Informs a decision; not policy."`
+3. [x] Boundary questions (`ENG-Q11`–`ENG-Q14`) recorded in `open-questions.md`.
+4. [ ] In a future founder-approved cycle, incorporate the recorded **sub-items into existing files** (GAP-09 through GAP-25).
+5. [x] Validate all links, frontmatter, and headings with `node scripts/validate-docs.js`.
